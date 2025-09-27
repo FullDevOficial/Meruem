@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-grupos',
   imports: [],
   templateUrl: './grupos.html',
-  styleUrl: './grupos.scss'
+  styleUrl: './grupos.scss',
 })
-export class Grupos {
-
-}
+export class Grupos {}

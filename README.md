@@ -1,59 +1,127 @@
-# Mereum
+# Meruem - Plataforma Colaborativa FullDev
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.2.
+Bem-vindo ao projeto colaborativo **Meruem**! Este repositório é mantido por voluntários da comunidade FullDev e tem como objetivo criar uma plataforma moderna para conectar membros, divulgar avisos, eventos e facilitar o acesso aos grupos de ajuda da comunidade.
 
-## Development server
+---
 
-To start a local development server, run:
+## Visão Geral
 
-```bash
+O Meruem é a nova plataforma de links da comunidade FullDev, permitindo que qualquer pessoa entre nos grupos de WhatsApp, acesse avisos, links úteis e participe dos eventos e iniciativas voluntárias. Esta versão está sendo desenvolvida em **Angular**, refatorando o modelo anterior feito em **React** ([fulldev.com.br](https://fulldev.com.br)).
+
+O Backend e o UI/UX já estão estruturados e a equipe está focada em entregar uma experiência moderna, acessível e colaborativa.
+
+---
+
+## Equipe de Desenvolvimento
+
+- **Kaynan**: Backend (Membro do conselho da comunidade)
+- **Lucas Pedro**: Owner do projeto
+- **Wagner**: Front-End Senior
+- **Henrike**: Front-End Jr
+- **Maria**: Front-End Jr / Estágio
+- **Natan**: Organização de Issues (Membro do conselho)
+
+Todos os membros são voluntários e colaboram para o crescimento da comunidade.
+
+---
+
+## Organização e Comunicação
+
+- **Grupo WhatsApp Time FullDev**: [Entrar no grupo](https://chat.whatsapp.com/FGY6bLbxban8HbYGYEqoUz)
+- **Figma UI/UX**: [Acessar Figma](https://www.figma.com/design/TFZk7pEOmlobbXcDBTtQEn/FullDev-Meruem?node-id=3-421&t=mFN4fvdbZgYkMOxY-1)
+- **GitHub Projects**: Organização das issues e tarefas do projeto
+- **Slack**: Em breve migração para organização dos projetos
+
+---
+
+## Stack e Principais Bibliotecas
+
+### Frontend
+
+- **Angular**: 20.3+
+- **TypeScript**: 5.9+
+- **SCSS**: Padrão para estilização
+
+### Lint/Padronização
+
+- **ESLint**: 9.36+
+- **Prettier**: 3.6+
+- **Husky**: 9.1+
+- **lint-staged**: 16.2+
+
+### Testes
+
+- **Jasmine**: 5.9+
+- **Karma**: 6.4+
+
+### Ferramentas de Apoio
+
+- **VS Code**
+- **Figma**
+- **GitHub Projects**
+
+---
+
+## Boas Práticas Aplicadas
+
+- **Padronização de Código:**
+  - ESLint e Prettier configurados para garantir consistência e legibilidade.
+  - Husky e lint-staged integrados para rodar lint e format automaticamente em pre-commit.
+  - Style guide definido no `.prettierrc` e regras recomendadas do ESLint + @typescript-eslint.
+- **Organização de Branches:**
+  - Branches criadas para cada tarefa ou melhoria (`chore/configuracao-padrao-husky-eslint-prettier`, etc).
+- **Documentação:**
+  - README completo e atualizado.
+  - Issues organizadas no GitHub Projects.
+- **Testes:**
+  - Testes unitários com Jasmine/Karma.
+  - Scripts para rodar lint, format e testes facilmente.
+- **Colaboração:**
+  - Comunicação ativa via WhatsApp, Slack e GitHub.
+  - Figma para UI/UX compartilhado.
+
+---
+
+## Como Contribuir
+
+1. **Confirme seu e-mail no GitHub para acesso ao repositório.**
+2. **Participe do grupo Time FullDev para integração com a equipe.**
+3. **Confira as issues no GitHub Projects e converse com o Natan para dúvidas sobre tarefas.**
+4. **Siga o style guide e as ferramentas de padronização (ESLint, Prettier, Husky).**
+5. **Participe das plannings semanais (dia a definir por enquete).**
+
+---
+
+## Como Rodar o Projeto
+
+```sh
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse [http://localhost:4200](http://localhost:4200) para visualizar a aplicação.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Testes e Padronização
 
-```bash
-ng generate component component-name
-```
+- **Lint:** `npm run lint`
+- **Format:** `npm run format`
+- **Testes unitários:** `ng test`
+- **Pre-commit:** Husky executa lint e prettier automaticamente
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## Documentação e Recursos
 
-## Building
+- [Angular CLI](https://angular.dev/tools/cli)
+- [Figma do projeto](https://www.figma.com/design/TFZk7pEOmlobbXcDBTtQEn/FullDev-Meruem?node-id=3-421&t=mFN4fvdbZgYkMOxY-1)
+- [Site antigo (React)](https://fulldev.com.br)
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+> Este projeto é feito por voluntários e para voluntários. Sinta-se à vontade para se apresentar, trocar LinkedIn e colaborar!
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Todos os direitos reservados à FullDev • 2025

@@ -1,0 +1,4 @@
+{
+  "src/**/*.{ts,tsx,js,jsx}": ["eslint", "prettier --check"],
+  "src/**/*": ["npm run build --if-present"]
+}
