@@ -12,4 +12,6 @@ export class App {
   
   var teste = 'erro eslint' 
 
+  console.log(teste);
+
 }
