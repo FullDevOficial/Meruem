@@ -1,0 +1,28 @@
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+
+    &__back {
+        color: var(--light-gray);
+    }
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+
+        &__item {
+            padding: 0 0.6em;
+            color: var(--light-gray);
+
+            &--active {
+                border: 1px solid #4C4C4C;
+                border-radius: 4px;
+                padding: 0.5em;
+                background-color: var(--dark-gray);
+                color: var(--white);
+            }
+        }
+    }
+}

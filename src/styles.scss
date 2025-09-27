@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --font-base: "Inter", sans-serif;
+    --light-gray: #BABABA;
+    --dark-gray: #1C1C1C;
+    --black: #0D0D0D;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: var(--font-base);
+    color: var(--light-gray);
+    background-color: var(--black);
+    font-size: 14px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+
+}
