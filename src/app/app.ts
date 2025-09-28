@@ -8,8 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('Mereum')
-  var teste = 'erro eslint' 
-
-  console.log(teste, "teste de erro eslint");
+  protected readonly title = signal('Mereum');
 }

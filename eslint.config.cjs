@@ -1,28 +1,38 @@
-const typescript = require('@typescript-eslint/eslint-plugin');
+// eslint.config.cjs
+const ts = require('@typescript-eslint/eslint-plugin');
 const parser = require('@typescript-eslint/parser');
-const prettier = require('eslint-plugin-prettier');
+const ng = require('@angular-eslint/eslint-plugin');
+const ngTpl = require('@angular-eslint/eslint-plugin-template');
 
-/** @type {import('eslint').Linter.FlatConfig} */
 module.exports = [
   {
-    files: ['**/*.{ts,tsx,js,jsx}'],
-    ignores: ['**/*.d.ts', 'node_modules/**', 'dist/**', 'eslint.config.cjs'],
+    files: ['**/*.ts'],
+    ignores: ['projects/**'],
     languageOptions: {
       parser,
       parserOptions: {
+        project: ['./tsconfig.app.json'],
         ecmaVersion: 'latest',
         sourceType: 'module',
-        project: './tsconfig.app.json',
       },
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      prettier,
+      '@typescript-eslint': ts,
+      '@angular-eslint': ng,
     },
     rules: {
-      ...typescript.configs.recommended.rules,
-      'prettier/prettier': 'error',
-      'no-var': 'error',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+      ],
+    },
+  },
+  {
+    files: ['**/*.html'],
+    plugins: { '@angular-eslint/template': ngTpl },
+    rules: {
+      // regras de template
     },
   },
 ];
