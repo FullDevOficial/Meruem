@@ -1,0 +1,30 @@
+.button {
+    font-size: 0.85em;
+    color: var(--white);
+    padding: 0.85em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    text-decoration: none;
+
+    &.link {
+        background-color: var(--dark-gray);
+        border: 1px solid var(--medium-dark);
+        border-radius: 0.2em;
+    }
+
+    &.primary {
+        background-color: var(--red);
+    }
+
+    &.secundary{
+        background-color: var(--medium-dark);
+    }
+
+    .warning{
+        background-color: var(--orange);
+
+    }
+}

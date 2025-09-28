@@ -1,7 +1,9 @@
 .home {
     display: grid;
-    place-items: center;
+    align-items: center;
+    margin: 0 auto;
     height: 100vh;
+    width: 28.57em;
 }
 
 .header {
@@ -29,7 +31,7 @@
         width: 8.78em;
         height: 8.78em;
         border-radius: 0.5em;
-        border: 1px solid #4C4C4C;
+        border: 1px solid var(--medium-dark);
         object-fit: cover;
     }
 
