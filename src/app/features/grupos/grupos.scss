@@ -1,0 +1,34 @@
+.group-section {
+    border: 1px solid var(--medium-dark);
+    padding: 1.15em;
+    border-radius: 0.57em;
+    margin-top: 1.15em;
+
+    >div {
+        display: grid;
+        grid-template-columns: auto 3fr auto;
+        margin-bottom: 0.57em;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 1.15em;
+    }
+
+    &__logo {
+        width: 2.68em;
+        height: 2.68em;
+        border: 1px solid var(--medium-dark);
+        border-radius: 0.57em;
+    }
+
+    &__description {
+        align-items: stretch;
+        margin-left: 0.57em;
+
+        p {
+            margin: 0.28em 0 0 0;
+        }
+
+    }
+}
