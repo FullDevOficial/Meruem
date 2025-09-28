@@ -7,7 +7,7 @@
 .header {
     display: flex;
     gap: 1em;
-    
+
     >div {
         display: flex;
         align-items: stretch;
@@ -33,18 +33,16 @@
         object-fit: cover;
     }
 
-    &__description-list {
+    &__description-list__item {
+        display: flex;
 
         img {
             padding-right: 0.7em;
         }
 
-        &__item {
-            display: flex;
-
-            p {
-                margin: 0 0 0.2em;
-            }
+        p {
+            margin: 0 0 0.2em;
         }
+
     }
 }
