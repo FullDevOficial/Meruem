@@ -1,0 +1,50 @@
+.home {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    gap: 1em;
+    
+    >div {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: center;
+        height: 8.78em;
+        padding-right: 3.07em;
+    }
+
+    &__title {
+        font-size: 2.29em;
+        color: var(--white);
+        margin: 0 0 0.2em;
+        font-weight: 400;
+        text-align: start;
+    }
+
+    &__img {
+        width: 8.78em;
+        height: 8.78em;
+        border-radius: 0.5em;
+        border: 1px solid #4C4C4C;
+        object-fit: cover;
+    }
+
+    &__description-list {
+
+        img {
+            padding-right: 0.7em;
+        }
+
+        &__item {
+            display: flex;
+
+            p {
+                margin: 0 0 0.2em;
+            }
+        }
+    }
+}

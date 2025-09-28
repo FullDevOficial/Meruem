@@ -7,7 +7,7 @@ import { Voluntario } from './features/voluntario/voluntario';
 
 export const routes: Routes = [
     {
-        path:'home',
+        path:'',
         component: Home
     },
     {
