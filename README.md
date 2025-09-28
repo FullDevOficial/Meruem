@@ -27,7 +27,6 @@ Todos os membros são voluntários e colaboram para o crescimento da comunidade.
 
 ## Organização e Comunicação
 
-- **Grupo WhatsApp Time FullDev**: [Entrar no grupo](https://chat.whatsapp.com/FGY6bLbxban8HbYGYEqoUz)
 - **Figma UI/UX**: [Acessar Figma](https://www.figma.com/design/TFZk7pEOmlobbXcDBTtQEn/FullDev-Meruem?node-id=3-421&t=mFN4fvdbZgYkMOxY-1)
 - **GitHub Projects**: Organização das issues e tarefas do projeto
 - **Slack**: Em breve migração para organização dos projetos
@@ -108,7 +107,7 @@ Acesse [http://localhost:4200](http://localhost:4200) para visualizar a aplicaç
 - **Lint:** `npm run lint`
 - **Format:** `npm run format`
 - **Testes unitários:** `ng test`
-- **Pre-commit:** Husky executa lint e prettier automaticamente
+- **Pre-commit:** Husky executa lint e prettier automaticamente, e também build para evitar quebras do sistema.
 
 ---
 
