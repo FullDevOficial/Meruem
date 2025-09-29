@@ -1,30 +1,35 @@
 <section class="home">
-    <header class="header">
-        <img class="header__img" src="fulldev.png" alt="logo FullDev">
+    <div>
+        <header class="header">
+            <img class="header__img" src="fulldev.png" alt="logo FullDev">
 
-        <div>
-            <h1 class="header__title">FullDev</h1>
-            <div class="header__description-list__item">
-                <img src="member.svg" alt="Icone membros">
-                <p>5458 Membros</p>
+            <div>
+                <h1 class="header__title">FullDev</h1>
+                <div class="header__description-list__item">
+                    <img src="member.svg" alt="Icone membros">
+                    <p>5458 Membros</p>
+                </div>
+
+                <div class="header__description-list__item">
+                    <img src="group-chat.svg" alt="Icone chat">
+                    <p>15 Grupos</p>
+
+                </div>
+
+                <div class="header__description-list__item">
+                    <img src="cupcake.svg" alt="Icone cupcake">
+                    <p>Criado em 10/06/2024 20:36 </p>
+                </div>
+
+                <div class="header__description-list__item">
+                    <img src="laptop-minimalistic.svg" alt="Icone laptop-minimalistc">
+                    <p>By Dev, For Dev</p>
+                </div>
             </div>
+        </header>
+        <app-grupos>Geral 1</app-grupos>
+        <app-grupos [src]="'codequeens.png'">Code Queens</app-grupos>
+        <app-button class="home__button" [showIcon]="false"></app-button>
+    </div>
 
-            <div class="header__description-list__item">
-                <img src="group-chat.svg" alt="Icone chat">
-                <p>15 Grupos</p>
-
-            </div>
-
-            <div class="header__description-list__item">
-                <img src="cupcake.svg" alt="Icone cupcake">
-                <p>Criado em 10/06/2024 20:36 </p>
-            </div>
-
-            <div class="header__description-list__item">
-                <img src="laptop-minimalistic.svg" alt="Icone laptop-minimalistc">
-                <p>By Dev, For Dev</p>
-            </div>
-        </div>
-    </header>
-    <app-grupos></app-grupos>
 </section>
