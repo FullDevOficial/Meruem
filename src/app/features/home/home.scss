@@ -24,8 +24,8 @@
     }
 
     &__title {
-        font-size: 2.29em;
-        color: var(--white);
+        font-size: var(--font-size-large);
+        color: var(--text-color-primary);
         margin: 0 0 0.2em;
         font-weight: 400;
         text-align: start;
@@ -41,6 +41,7 @@
 
     &__description-list__item {
         display: flex;
+        font-size: var(--font-size-small);
 
         img {
             padding-right: 0.7em;

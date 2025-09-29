@@ -1,13 +1,13 @@
 .list-group {
     border: 1px solid var(--medium-dark);
-    padding: 1.15em;
+    padding: 1.04em;
     border-radius: 0.57em;
     margin: 1.15em 0;
 
     &__item {
         list-style-type: none;
         border-bottom: 1px solid #3D444D;
-        padding: 0.89em;
+        padding: 1.04em;
         font-size: 0.86em;
         
         &:last-child {
@@ -16,6 +16,7 @@
         
         &__link{
             color: var(--text-color-secondary);
+            font-size: var(--font-size-capition);
             display: flex;
             justify-content: space-between;
             align-items: center;

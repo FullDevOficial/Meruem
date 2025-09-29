@@ -12,13 +12,20 @@
     --text-color-primary: #FFFFFF;
     --text-color-secondary: #8B949E;
     --text-color-third: #9198A1;
+
+    --font-size-capition: 12px;  
+    --font-size-small: 14px; 
+    --font-size-medium: 16px;    
+    --font-size-xl: 1.5em;   
+    --font-size-large: 32px;    
+
 }
 
 body {
     font-family: var(--font-base);
     color: var(--text-color-secondary);
     background-color: var(--black);
-    font-size: 14px;
+    font-size: var(--font-size-medium);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
