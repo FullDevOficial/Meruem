@@ -7,14 +7,16 @@
     --medium-dark: #4C4C4C;
     --dark-gray: #1C1C1C;
     --black: #0D0D0D;
-    --white: #FFFFFF;
     --red: #B22D00;
     --orange: #D77E00;
+    --text-color-primary: #FFFFFF;
+    --text-color-secondary: #8B949E;
+    --text-color-third: #9198A1;
 }
 
 body {
     font-family: var(--font-base);
-    color: var(--light-gray);
+    color: var(--text-color-secondary);
     background-color: var(--black);
     font-size: 14px;
     margin: 0;

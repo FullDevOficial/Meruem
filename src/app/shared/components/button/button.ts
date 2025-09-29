@@ -15,8 +15,8 @@ export class Button {
   @Input() color: "link" | "primary" | "secundary" | "warning" = "link";
   
   //Link
-  @Input() routerLink?:string; 
-  @Input() href?:string;
+  @Input() routerLink?:string;  /* Link interno */
+  @Input() href?:string;      /* Link externo */
   @Input() target: "_self" | "_blank" = "_self"
 
 
