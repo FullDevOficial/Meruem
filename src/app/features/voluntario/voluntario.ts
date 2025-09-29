@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-voluntario',
   imports: [],
   templateUrl: './voluntario.html',
-  styleUrl: './voluntario.scss'
+  styleUrl: './voluntario.scss',
 })
-export class Voluntario {
-
-}
+export class Voluntario {}
