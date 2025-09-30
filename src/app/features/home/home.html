@@ -28,15 +28,15 @@
             </div>
         </header>
 
-        <app-grupos>Geral 1</app-grupos>
-        <app-grupos [src]="'codequeens.png'">Code Queens</app-grupos>
+        <app-grupos [showIcon]="true">Geral 1</app-grupos>
+        <app-grupos [src]="'codequeens.png'" [showIcon]="true">Code Queens</app-grupos>
 
-        <app-button class="home__button">Exibir todos os grupos</app-button>
+        <app-button class="home__button" (click)="openModal()">Exibir todos os grupos</app-button>
 
         <app-list-group></app-list-group>
 
         <section class="section-social-media">
-            <app-button >
+            <app-button>
                 <img class="section-social-media__img" src="github.svg" alt="">
             </app-button>
             <app-button>
@@ -47,13 +47,21 @@
             </app-button>
             <app-button>
                 <img class="section-social-media__img" src="instagram.svg" alt="">
-            </app-button> 
+            </app-button>
             <app-button>
                 <img class="section-social-media__img" src="discord.svg" alt="">
             </app-button>
         </section>
         <app-footer></app-footer>
+
+        <app-modal-generic [title]="'Grupos'" [isOpen]="showModal" (close)="closeModal()">
+            <app-grupos [parentType]="'modal'" [src]="'codequeens.png'">Code Queens</app-grupos>
+            <app-grupos [parentType]="'modal'" [src]="'codequeens.png'">Code Queens</app-grupos>
+            <app-grupos [parentType]="'modal'" [src]="'codequeens.png'">Code Queens</app-grupos>
+            <app-grupos [parentType]="'modal'" [src]="'codequeens.png'">Code Queens</app-grupos>
+
+        </app-modal-generic>
     </div>
-    
+
 
 </section>

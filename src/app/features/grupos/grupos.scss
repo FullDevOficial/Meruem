@@ -1,18 +1,20 @@
 .group-section {
-    border: 1px solid var(--medium-dark);
-    padding: 1.15em;
+    padding: 1em;
     border-radius: 0.57em;
     margin: 1em 0;
-
+    border: 1px solid var(--medium-dark);
+    
     >div {
         display: grid;
+        align-items: center;
         grid-template-columns: auto 3fr auto;
         margin-bottom: 0.57em;
     }
 
     h2 {
         margin: 0;
-        font-size: 1.15em;
+        font-size: var(--font-size-medium);
+        font-weight: 400;
     }
 
     &__logo {
@@ -33,7 +35,18 @@
         p {
             margin: 0.28em 0 0 0;
             font-size: var(--font-size-capition);
+            color: var(--text-color-secondary);
         }
 
+    }
+}
+
+.modal{
+    background-color: #1F1F1F;
+    border: 1px solid var(--dark-gray);
+    margin: 0.88em 0;
+
+    &:last-child{
+        margin-bottom: 0;
     }
 }
