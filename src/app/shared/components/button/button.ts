@@ -9,7 +9,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './button.scss'
 })
 export class Button {
-  @Input() showIcon= true;
+  @Input() showIcon= false;
+  
   @Input() label: string = "Entrar no grupo";
   @Input() type: "button" | "submit" = "button";
   @Input() color: "link" | "primary" | "secundary" | "warning" = "link";

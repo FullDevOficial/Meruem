@@ -30,10 +30,30 @@
 
         <app-grupos>Geral 1</app-grupos>
         <app-grupos [src]="'codequeens.png'">Code Queens</app-grupos>
-        
-        <app-button class="home__button" [showIcon]="false"></app-button>
+
+        <app-button class="home__button">Exibir todos os grupos</app-button>
 
         <app-list-group></app-list-group>
+
+        <section class="section-social-media">
+            <app-button >
+                <img class="section-social-media__img" src="github.svg" alt="">
+            </app-button>
+            <app-button>
+                <img class="section-social-media__img" src="youtube.svg" alt="">
+            </app-button>
+            <app-button>
+                <img class="section-social-media__img" src="linkedin.svg" alt="">
+            </app-button>
+            <app-button>
+                <img class="section-social-media__img" src="instagram.svg" alt="">
+            </app-button> 
+            <app-button>
+                <img class="section-social-media__img" src="discord.svg" alt="">
+            </app-button>
+        </section>
+        <app-footer></app-footer>
     </div>
+    
 
 </section>

@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Grupos } from "../grupos/grupos";
 import { Button } from "../../shared/components/button/button";
 import { ListGroup } from "../../shared/components/list-group/list-group";
+import { Footer } from "../../shared/components/footer/footer";
 
 @Component({
   selector: 'app-home',
-  imports: [Grupos, Button, ListGroup],
+  imports: [Grupos, Button, ListGroup, Footer],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

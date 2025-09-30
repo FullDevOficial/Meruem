@@ -1,7 +1,9 @@
 .footer{
     display: flex;
     justify-content: space-between;
-    padding: 1.25em;
+    border-top: 1px solid #3D444D;
+    padding: 1em;
+    margin-top: 1em;
     font-size: var(----font-size-capition);
     color: var(--text-color-third);
 }
