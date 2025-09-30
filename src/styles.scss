@@ -13,11 +13,11 @@
     --text-color-secondary: #8B949E;
     --text-color-third: #9198A1;
 
-    --font-size-capition: 12px;  
-    --font-size-small: 14px; 
-    --font-size-medium: 16px;    
-    --font-size-xl: 24px;   
-    --font-size-large: 32px;    
+    --font-size-capition: 12px;
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-xl: 24px;
+    --font-size-large: 32px;
 
 }
 
@@ -29,10 +29,33 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: 400;
 }
 
 a {
     cursor: pointer;
     text-decoration: none;
 
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    >div {
+        padding: 1em 1.25em;
+        color: var(--text-color-primary);
+
+    }
+
+    &__title {
+        margin: 0.5em 0;
+        font-size: var(--font-size-large);
+        font-weight: 400;
+
+    }
+
+    
 }

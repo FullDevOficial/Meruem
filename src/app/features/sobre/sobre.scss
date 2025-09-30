@@ -1,14 +1,4 @@
 .section-sobre {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    >div{
-        padding: 1em 1.25em;
-        color: var(--text-color-primary);
-
-    }
 
     &__content{
         border: 1px solid var(--medium-dark);
@@ -16,11 +6,6 @@
         margin-bottom: 10.62em;
     }
 
-    &__title{
-        margin: 0.5em 0;
-        font-size: var(--font-size-large);
-
-    }
 
     &__history {
         font-size: var(--font-size-xl);
@@ -36,7 +21,6 @@
 
         &__title{
             margin: 0;
-            font-weight: 400;
             font-size: var(--font-size-xl);
         }
 
@@ -50,8 +34,9 @@
 
 
 :host ::ng-deep .section-sobre__content .button{
-    padding: 0.67em 2em;
+    padding: 0.57em 1.72em;
     width: auto;
     margin-top: 1em;
+    font-size: var(--font-size-small);
 
 }
