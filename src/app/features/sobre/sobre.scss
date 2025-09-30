@@ -1,6 +1,14 @@
 .section-sobre {
-    padding: 1em 1.25em;
-    color: var(--text-color-primary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    >div{
+        padding: 1em 1.25em;
+        color: var(--text-color-primary);
+
+    }
 
     &__content{
         border: 1px solid var(--medium-dark);
