@@ -12,7 +12,7 @@ import { ModalGeneric } from "../../shared/components/modal-generic/modal-generi
   styleUrl: './home.scss'
 })
 export class Home {
-  showModal: boolean = true;
+  showModal: boolean = false;
 
   openModal(){
     this.showModal = true;
