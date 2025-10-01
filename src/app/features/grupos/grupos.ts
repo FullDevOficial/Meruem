@@ -6,11 +6,11 @@ import { CommonModule } from '@angular/common';
   selector: 'app-grupos',
   imports: [Button, CommonModule],
   templateUrl: './grupos.html',
-  styleUrl: './grupos.scss'
+  styleUrl: './grupos.scss',
 })
 export class Grupos {
   @Input() src: "fulldev.png" | "codequeens.png" = "fulldev.png"
   @Input() parentType: 'home' | 'modal' = 'home';
   @Input() showIcon= false;
-
 }
+

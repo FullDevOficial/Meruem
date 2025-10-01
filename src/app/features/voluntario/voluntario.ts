@@ -8,7 +8,7 @@ import { ModalGeneric } from "../../shared/components/modal-generic/modal-generi
   selector: 'app-voluntario',
   imports: [NavMenu, Footer, Button, ModalGeneric],
   templateUrl: './voluntario.html',
-  styleUrl: './voluntario.scss'
+  styleUrl: './voluntario.scss',
 })
 export class Voluntario {
   showModal: boolean = false;
@@ -21,5 +21,4 @@ export class Voluntario {
     this.showModal = false;
 
   }
-
 }

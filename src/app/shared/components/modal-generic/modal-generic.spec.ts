@@ -8,9 +8,8 @@ describe('ModalGeneric', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ModalGeneric]
-    })
-    .compileComponents();
+      imports: [ModalGeneric],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ModalGeneric);
     component = fixture.componentInstance;

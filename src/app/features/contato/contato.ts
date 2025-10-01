@@ -6,8 +6,6 @@ import { Footer } from "../../shared/components/footer/footer";
   selector: 'app-contato',
   imports: [NavMenu, Footer],
   templateUrl: './contato.html',
-  styleUrl: './contato.scss'
+  styleUrl: './contato.scss',
 })
-export class Contato {
-
-}
+export class Contato {}

@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'app-modal-generic',
   imports: [CommonModule],
   templateUrl: './modal-generic.html',
-  styleUrl: './modal-generic.scss'
+  styleUrl: './modal-generic.scss',
 })
 export class ModalGeneric {
   @Input() title?: string = 'Title';

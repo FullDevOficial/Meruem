@@ -9,7 +9,7 @@ import { ModalGeneric } from "../../shared/components/modal-generic/modal-generi
   selector: 'app-home',
   imports: [Grupos, Button, ListGroup, Footer, ModalGeneric],
   templateUrl: './home.html',
-  styleUrl: './home.scss'
+  styleUrl: './home.scss',
 })
 export class Home {
   showModal: boolean = false;

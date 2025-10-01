@@ -7,8 +7,6 @@ import { Button } from "../../shared/components/button/button";
   selector: 'app-sobre',
   imports: [NavMenu, Footer, Button],
   templateUrl: './sobre.html',
-  styleUrl: './sobre.scss'
+  styleUrl: './sobre.scss',
 })
-export class Sobre {
-
-}
+export class Sobre {}
