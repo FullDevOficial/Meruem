@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --font-base: "Inter", sans-serif;
+    --light-gray: #BABABA;
+    --medium-dark: #4C4C4C;
+    --dark-gray: #1C1C1C;
+    --black: #0D0D0D;
+    --red: #B22D00;
+    --orange: #D77E00;
+    --text-color-primary: #FFFFFF;
+    --text-color-secondary: #8B949E;
+    --text-color-third: #9198A1;
+
+    --font-size-capition: 12px;
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-xl: 24px;
+    --font-size-large: 32px;
+
+}
+
+body {
+    font-family: var(--font-base);
+    color: var(--text-color-secondary);
+    background-color: var(--black);
+    font-size: var(--font-size-medium);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    >div {
+        padding: 1em 1.25em;
+        color: var(--text-color-primary);
+
+    }
+
+    &__title {
+        margin: 0.5em 0;
+        font-size: var(--font-size-large);
+        font-weight: 400;
+
+    }
+
+    
+}

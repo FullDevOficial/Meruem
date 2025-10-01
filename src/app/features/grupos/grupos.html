@@ -1,1 +1,13 @@
-<p>grupos works!</p>
+<section class="group-section" [ngClass]="parentType">
+    <div class="group-section__content">
+        <img [src]="src" class="group-section__logo" alt="Logo FullDev">
+        <div class="group-section__description">
+            <h2 class="group-section__description__title"><ng-content></ng-content></h2>
+            <p><img src="member.svg" alt="Icone membros"> 1021 </p>
+        </div>
+        @if (showIcon) {
+            <img src="fix.svg" alt="Icone fix">
+        }
+    </div>
+    <app-button [color]="'link'" [showIcon]="true">Entrar no grupo</app-button>
+</section>

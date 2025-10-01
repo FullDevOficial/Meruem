@@ -1,1 +1,111 @@
-<p>voluntario works!</p>
+<section class="section section-voluntary">
+    <app-nav-menu></app-nav-menu>
+    <div class="container">
+
+        <h2 class="section__title">Seja voluntário</h2>
+        <article class="section-voluntary__content">
+            <section>
+
+                <p>A FullDev nasceu com um propósito </p>
+                <p>Conectar desenvolvedores e criar oportunidades reais de crescimento.</p>
+                <p>Mas nenhum sonho grande se constrói sozinho.</p>
+                <p>Por isso, abrimos espaço para pessoas que acreditam no nosso movimento e querem caminhar junto nessa
+                    jornada.</p>
+                <p>Ser voluntário na FullDev é muito mais do que doar tempo é fazer parte de algo maior, é contribuir
+                    para a comunidade que está transformando o cenário dev no Brasil.</p>
+
+            </section>
+
+            <section>
+                <h2 class="section-voluntary__content__section-title">O que você pode fazer como voluntário?</h2>
+                <ul class="section-voluntary__content__list">
+
+                    <li>Apoiar na organização de eventos online;</li>
+                    <li>Contribuir na criação de conteúdos e materiais educativos;</li>
+                    <li>Participar da moderação da comunidade e ajudar novos membros;</li>
+                    <li>Colaborar em projetos de tecnologia, design e inovação;</li>
+                    <li>Ser uma voz ativa nas nossas redes, compartilhando ideias e feedbacks.</li>
+
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="section-voluntary__content__section-title">O que você ganha com isso?</h2>
+                <ul class="section-voluntary__content__list">
+
+                    <li>Experiência prática em projetos reais;</li>
+                    <li>Networking com devs de todo o Brasil;</li>
+                    <li>Reconhecimento dentro da comunidade;</li>
+                    <li>A chance de deixar sua marca em um projeto que pode mudar a vida de muita gente.</li>
+
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="section-voluntary__content__section-title">Para quem é esse convite?</h2>
+                <p>Para qualquer pessoa que queira somar, seja dev, designer, criador de conteúdo, estudante ou
+                    profissional já consolidado. </p>
+                <p>O importante é ter vontade de contribuir e acreditar que a comunidade pode levar a gente mais longe.
+                </p>
+            </section>
+
+
+            <app-button [color]="'primary'" (click)="openModal()">Entrar em contato</app-button>
+        </article>
+
+    </div>
+
+    <div>
+
+        <section class="section-social-media">
+            <app-button>
+                <img class="section-social-media__img" src="github.svg" alt="">
+            </app-button>
+            <app-button>
+                <img class="section-social-media__img" src="youtube.svg" alt="">
+            </app-button>
+            <app-button>
+                <img class="section-social-media__img" src="linkedin.svg" alt="">
+            </app-button>
+            <app-button>
+                <img class="section-social-media__img" src="instagram.svg" alt="">
+            </app-button>
+            <app-button>
+                <img class="section-social-media__img" src="discord.svg" alt="">
+            </app-button>
+        </section>
+        <app-footer></app-footer>
+    </div>
+
+    <app-modal-generic [title]="'Seja voluntário'" [isOpen]="showModal" (close)="closeModal()">
+
+        <form class="formulario">
+            <label for="name">Nome:
+                <input type="text" placeholder="Insira seu nome">
+            </label>
+            <label for="email">E-mail:
+                <input type="email" placeholder="Insira seu E-mail">
+            </label>
+            <label for="linkedin">Linkedin:
+                <input type="url" placeholder="Insira seu Linkedin">
+            </label>
+            <div class="telephone">
+                <label for="ddd telephone">Número:</label>
+                <div>
+                    <input type="number" name="ddd" placeholder="+55">
+                    <input type="number" name="telephone" placeholder="(21) 9 88460135">
+
+                </div>
+            </div>
+
+            <div class="formulario__termo">
+                <input type="checkbox" name="termo">
+                <label for="termo">Concordo com os termos de usuário </label>
+            </div>
+
+            <hr>
+
+            <app-button [color]="'primary'">Enviar</app-button>
+        </form>
+    </app-modal-generic>
+</section>
