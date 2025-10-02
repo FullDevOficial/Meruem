@@ -124,3 +124,64 @@ Acesse [http://localhost:4200](http://localhost:4200) para visualizar a aplicaç
 ---
 
 Todos os direitos reservados à FullDev • 2025
+
+---
+
+## ✅ Estrutura de Pastas Implementada
+
+O projeto agora possui uma estrutura organizacional limpa e escalável:
+
+```
+src/app/
+├── core/                    # Funcionalidades core da aplicação (futuro)
+│   └── services/           # Serviços globais (preparado para expansão)
+├── shared/                 # Componentes e utilitários reutilizáveis
+│   ├── components/         # Componentes compartilhados (organizados)
+│   ├── directives/         # Diretivas personalizadas (preparado)
+│   └── pipes/              # Pipes personalizados (preparado)
+├── features/               # Páginas da aplicação (organizadas)
+│   ├── home/              # Página inicial
+│   ├── sobre/             # Página sobre
+│   ├── contato/           # Página de contato
+│   ├── voluntario/        # Página de voluntários
+│   └── grupos/            # Página de grupos
+└── layouts/               # Layouts da aplicação (preparado)
+    └── main-layout/       # Layout principal (estrutura criada)
+```
+
+### ✅ Critérios de Aceite Atendidos
+
+**✅ Projeto roda sem erros com `ng serve`**
+
+- Todos os componentes funcionando como antes
+- Nenhuma funcionalidade foi alterada
+
+**✅ Linting e formatting funcionando**
+
+- ESLint configurado para TypeScript
+- Prettier formatando todos os arquivos
+- Pre-commit hooks mantidos
+
+**✅ Estrutura de pastas documentada no README**
+
+- Documentação completa da nova organização
+- Arquivo index.ts em cada pasta para facilitar imports
+- Estrutura preparada para crescimento futuro
+
+### 🎯 O que foi feito
+
+**Organização Estrutural:**
+
+- ✅ Criadas pastas `core/`, `shared/`, `features/`, `layouts/`
+- ✅ Arquivos `index.ts` para organizar exports
+- ✅ Estrutura preparada para serviços, componentes, pipes e diretivas
+- ✅ Mantida toda funcionalidade existente intacta
+
+**Benefícios:**
+
+- 📁 **Organização**: Código bem estruturado e fácil de navegar
+- 🔄 **Escalabilidade**: Pronto para adicionar novos recursos
+- 🤝 **Colaboração**: Estrutura clara para toda a equipe
+- 🛠️ **Manutenção**: Fácil localizar e modificar componentes
+
+A estrutura está pronta para receber novos componentes, serviços e funcionalidades de forma organizada! 🎉

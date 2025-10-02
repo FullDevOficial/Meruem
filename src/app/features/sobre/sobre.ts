@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NavMenu } from "../../shared/components/nav-menu/nav-menu";
-import { Footer } from "../../shared/components/footer/footer";
-import { Button } from "../../shared/components/button/button";
+import { ButtonComponent } from '../../shared/components/button/button';
+import { FooterComponent } from '../../shared/components/footer/footer';
+import { NavMenuComponent } from '../../shared/components/nav-menu/nav-menu';
 
 @Component({
   selector: 'app-sobre',
-  imports: [NavMenu, Footer, Button],
+  imports: [NavMenuComponent, FooterComponent, ButtonComponent],
   templateUrl: './sobre.html',
   styleUrl: './sobre.scss',
 })
-export class Sobre {}
+export class SobreComponent {}

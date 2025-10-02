@@ -1,30 +1,34 @@
 import { Routes } from '@angular/router';
 
-import { Home } from './features/home/home';
-import { Sobre } from './features/sobre/sobre';
-import { Contato } from './features/contato/contato';
-import { Voluntario } from './features/voluntario/voluntario';
-
 export const routes: Routes = [
-    {
-        path:'',
-        redirectTo: 'home',
-        pathMatch:'full'
-    },
-    {
-        path:'home',
-        component: Home
-    },
-    {
-        path:'sobre',
-        component: Sobre
-    },
-    {
-        path:'contato',
-        component: Contato
-    },
-    {
-        path:'voluntario',
-        component: Voluntario
-    },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('./features/home/home').then((m) => m.HomeComponent),
+  },
+  {
+    path: 'sobre',
+    loadComponent: () => import('./features/sobre/sobre').then((m) => m.SobreComponent),
+  },
+  {
+    path: 'contato',
+    loadComponent: () => import('./features/contato/contato').then((m) => m.ContatoComponent),
+  },
+  {
+    path: 'voluntario',
+    loadComponent: () =>
+      import('./features/voluntario/voluntario').then((m) => m.VoluntarioComponent),
+  },
+  {
+    path: 'grupos',
+    loadComponent: () => import('./features/grupos/grupos').then((m) => m.GruposComponent),
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
+  },
 ];
