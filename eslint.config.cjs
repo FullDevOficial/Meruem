@@ -1,13 +1,15 @@
 // eslint.config.cjs
 const ts = require('@typescript-eslint/eslint-plugin');
 const parser = require('@typescript-eslint/parser');
-const ng = require('@angular-eslint/eslint-plugin');
-const ngTpl = require('@angular-eslint/eslint-plugin-template');
 
 module.exports = [
+  // Configuração para ignorar arquivos globalmente
   {
-    files: ['**/*.ts'],
-    ignores: ['projects/**'],
+    ignores: ['dist/**', 'node_modules/**', '.angular/**', '**/*.html', 'projects/**'],
+  },
+  // Configuração para arquivos TypeScript
+  {
+    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       parser,
       parserOptions: {
@@ -18,7 +20,6 @@ module.exports = [
     },
     plugins: {
       '@typescript-eslint': ts,
-      '@angular-eslint': ng,
     },
     rules: {
       'no-console': ['warn', { allow: ['warn', 'error'] }],
@@ -28,11 +29,15 @@ module.exports = [
       ],
     },
   },
+  // Configuração para arquivos JavaScript
   {
-    files: ['**/*.html'],
-    plugins: { '@angular-eslint/template': ngTpl },
+    files: ['**/*.js', '**/*.jsx'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+    },
     rules: {
-      // regras de template
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
     },
   },
 ];

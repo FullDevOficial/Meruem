@@ -1,25 +1,30 @@
-import { Component, ViewChild } from '@angular/core';
-import { Grupos } from "../grupos/grupos";
-import { Button } from "../../shared/components/button/button";
-import { ListGroup } from "../../shared/components/list-group/list-group";
-import { Footer } from "../../shared/components/footer/footer";
-import { ModalGeneric } from "../../shared/components/modal-generic/modal-generic";
+import { Component } from '@angular/core';
+import { ButtonComponent } from '../../shared/components/button/button';
+import { FooterComponent } from '../../shared/components/footer/footer';
+import { ListGroupComponent } from '../../shared/components/list-group/list-group';
+import { ModalGenericComponent } from '../../shared/components/modal-generic/modal-generic';
+import { GruposComponent } from '../grupos/grupos';
 
 @Component({
   selector: 'app-home',
-  imports: [Grupos, Button, ListGroup, Footer, ModalGeneric],
+  imports: [
+    GruposComponent,
+    ButtonComponent,
+    ListGroupComponent,
+    FooterComponent,
+    ModalGenericComponent,
+  ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {
+export class HomeComponent {
   showModal: boolean = false;
 
-  openModal(){
+  openModal() {
     this.showModal = true;
   }
 
-  closeModal(){
+  closeModal() {
     this.showModal = false;
-
   }
 }

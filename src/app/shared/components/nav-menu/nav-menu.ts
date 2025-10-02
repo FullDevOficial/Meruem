@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterModule } from "@angular/router";
-
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav-menu',
   imports: [RouterModule],
   templateUrl: './nav-menu.html',
-  styleUrl: './nav-menu.scss'
+  styleUrl: './nav-menu.scss',
 })
-export class NavMenu {
-
-}
+export class NavMenuComponent {}

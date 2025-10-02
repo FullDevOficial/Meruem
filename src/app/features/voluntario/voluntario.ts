@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { NavMenu } from "../../shared/components/nav-menu/nav-menu";
-import { Footer } from "../../shared/components/footer/footer";
-import { Button } from "../../shared/components/button/button";
-import { ModalGeneric } from "../../shared/components/modal-generic/modal-generic";
+import { ButtonComponent } from '../../shared/components/button/button';
+import { FooterComponent } from '../../shared/components/footer/footer';
+import { ModalGenericComponent } from '../../shared/components/modal-generic/modal-generic';
+import { NavMenuComponent } from '../../shared/components/nav-menu/nav-menu';
 
 @Component({
   selector: 'app-voluntario',
-  imports: [NavMenu, Footer, Button, ModalGeneric],
+  imports: [NavMenuComponent, FooterComponent, ButtonComponent, ModalGenericComponent],
   templateUrl: './voluntario.html',
   styleUrl: './voluntario.scss',
 })
-export class Voluntario {
+export class VoluntarioComponent {
   showModal: boolean = false;
 
   openModal() {
@@ -19,6 +19,5 @@ export class Voluntario {
 
   closeModal() {
     this.showModal = false;
-
   }
 }

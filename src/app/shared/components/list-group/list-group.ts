@@ -5,8 +5,6 @@ import { RouterModule } from '@angular/router';
   selector: 'app-list-group',
   imports: [RouterModule],
   templateUrl: './list-group.html',
-  styleUrl: './list-group.scss'
+  styleUrl: './list-group.scss',
 })
-export class ListGroup {
-
-}
+export class ListGroupComponent {}
