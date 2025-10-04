@@ -1,17 +1,17 @@
 @if (routerLink) {
-  <a [routerLink]="routerLink" [ngClass]="color" class="button">
+  <a [routerLink]="routerLink" [ngClass]="color" class="button" (click)="handleClick()">
     <ng-content></ng-content>
   </a>
 }
 
 @if (href && !routerLink) {
-  <a [href]="href" [target]="target" [ngClass]="color" class="button">
+  <a [href]="href" [target]="target" [ngClass]="color" class="button" (click)="handleClick()">
     <ng-content></ng-content>
   </a>
 }
 
 @if (!routerLink && !href) {
-  <button [type]="type" [ngClass]="color" class="button">
+  <button [type]="type" [ngClass]="color" class="button" (click)="handleClick()">
     <ng-content></ng-content>
 
     @if (showIcon) {

@@ -9,5 +9,17 @@
             <img src="fix.svg" alt="Icone fix">
         }
     </div>
-    <app-button [color]="'link'" [showIcon]="true">Entrar no grupo</app-button>
+    <app-button 
+        [color]="'link'" 
+        [showIcon]="true"
+        (click)="openMembershipModal()">
+        Entrar no grupo
+    </app-button>
 </section>
+
+<!-- Modal de Inscrição -->
+<app-grupos-membership-modal 
+    [isOpen]="isMembershipModalOpen"
+    (close)="closeMembershipModal()"
+    (confirm)="onMembershipConfirmed($event)">
+</app-grupos-membership-modal>

@@ -3,13 +3,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--medium-dark);
-  border-radius: 0.25em;
+  background-color: #2a2a2a; // Cor escura do fundo do modal
+  border-radius: 4px;
   z-index: 1000;
   max-width: 90%;
   width: 450px;
-  color: var(--text-color-primary);
-  padding: 2em;
+  height: 416px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+
+  // Tablet sizes
+  &-sm { width: 320px; }
+  &-md { width: 450px; }
+  &-lg { width: 600px; }
+  &-xl { width: 800px; }
 
   &__backdrop {
     position: fixed;
@@ -17,33 +26,231 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 999;
+    backdrop-filter: blur(2px);
   }
 
   &__header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #5a5a5a;
-    padding-bottom: 0.88em;
-
-    h2 {
+    align-items: center;
+    padding: 24px 32px 16px;
+    
+    .modal__title {
       margin: 0;
-      font-size: var(--font-size-xl);
-      font-weight: bold;
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+    }
+  }
+
+  &__close-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    mat-icon {
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__banner {
+    background-color: #D77E00; // Cor laranja sólida
+    color: white;
+    padding: 8px;
+    margin: 0 32px; // Margem de 32px nas laterais
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: 0 0 4px 4px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box; // Inclui padding no cálculo da largura
+  }
+
+  &__body {
+    padding: 24px 32px;
+    font-size: 16px;
+    line-height: 1.6;
+    
+    .form-field {
+      margin-bottom: 20px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    // Estilos específicos para inputs do Angular Material
+    ::ng-deep .mat-mdc-form-field-input-control {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: white !important;
+      background-color: #BABABA !important;
+      border-radius: 4px;
+      
+      .mat-mdc-input-element {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #212529 !important;
+        background-color: #BABABA !important;
+        
+        &::placeholder {
+          color: rgba(33, 37, 41, 0.7) !important;
+        }
+      }
+    }
+
+    ::ng-deep .mat-mdc-form-field {
+      .mat-mdc-text-field-wrapper {
+        background-color: #BABABA !important;
+        border-radius: 4px;
+        
+        .mat-mdc-form-field-flex {
+          background-color: #BABABA !important;
+          
+          .mat-mdc-form-field-infix {
+            background-color: #BABABA !important;
+            
+            input {
+              font-family: 'Inter', sans-serif !important;
+              font-size: 14px !important;
+              font-weight: 400 !important;
+              color: #212529 !important;
+              background-color: transparent !important;
+              
+              &::placeholder {
+                color: rgba(33, 37, 41, 0.7) !important;
+              }
+            }
+          }
+        }
+      }
+      
+      .mat-mdc-form-field-label {
+        color: white !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+      }
+      
+      .mat-mdc-form-field-outline {
+        color: rgba(255, 255, 255, 0.3) !important;
+      }
+      
+      .mat-mdc-form-field-outline-thick {
+        color: white !important;
+        stroke-width: 2px !important;
+      }
+
+      // Estados focado/hover
+      &.mat-focused,
+      &.mat-mdc-form-field-should-float {
+        .mat-mdc-form-field-outline-thick {
+          color: white !important;
+          stroke-width: 2px !important;
+        }
+
+        .mat-mdc-form-field-infix input {
+  color: #212529 !important;
+        }
+
+        .mat-mdc-form-field-input-element {
+          color: #212529 !important;
+        }
+      }
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-top: 24px;
+
+      mat-checkbox {
+        .mat-checkbox-frame {
+          border-color: white;
+        }
+        
+        &.mat-checked .mat-checkbox-background {
+          background-color: #ff6b35;
+        }
+
+        ::ng-deep .mat-checkbox-label {
+          color: #EDEEEE !important;
+          font-family: 'Inter', sans-serif !important;
+          font-size: 14px !important;
+          font-weight: 400 !important;
+        }
+      }
     }
   }
 
   &__footer {
-    padding: 1rem;
-    text-align: right;
-    border-top: 1px solid #ccc;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 80px; // Garante altura mínima para o footer ser visível
+
+    .confirm-button {
+      background-color: #B22D00;
+      color: white;
+      border: none;
+      width: 386px;
+      height: 40px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-top: 8px;
+      margin: 24px 0 0 0;
+
+      &:hover:not(:disabled) {
+        transform: translateY(-1px);
+        opacity: 0.9;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
   }
 }
 
-.close-btn {
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+// Responsivo
+@media (max-width: 768px) {
+  .modal {
+    width: 90%;
+    margin: 20px;
+    
+    &__header,
+    &__body,
+    &__footer {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    &__banner {
+      padding: 16px 20px;
+    }
+  }
 }
