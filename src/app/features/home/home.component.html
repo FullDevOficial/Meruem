@@ -1,0 +1,72 @@
+<section class="home">
+    <div>
+        <header class="header">
+            <img class="header__img" src="fulldev.png" alt="logo FullDev">
+
+            <div>
+                <h1 class="header__title">FullDev</h1>
+                <div class="header__description-list__item">
+                    <img src="member.svg" alt="Icone membros">
+                    <p>5458 Membros</p>
+                </div>
+
+                <div class="header__description-list__item">
+                    <img src="group-chat.svg" alt="Icone chat">
+                    <p>15 Grupos</p>
+
+                </div>
+
+                <div class="header__description-list__item">
+                    <img src="cupcake.svg" alt="Icone cupcake">
+                    <p>Criado em 10/06/2024 20:36 </p>
+                </div>
+
+                <div class="header__description-list__item">
+                    <img src="laptop-minimalistic.svg" alt="Icone laptop-minimalistc">
+                    <p>By Dev, For Dev</p>
+                </div>
+            </div>
+        </header>
+
+        <app-grupos-component [showIcon]="true" text="Geral 1"></app-grupos-component>
+        <app-grupos-component [src]="'codequeens.png'" [showIcon]="true" text="Code Queens"></app-grupos-component>
+
+        <app-custom-button-component class="home__button" (buttonClick)="openModal()"
+            text="Exibir todos os grupos"></app-custom-button-component>
+
+        <ul class="list-group">
+            <li class="list-group__item">
+                <a class="list-group__item__link" routerLink="/sobre">Sobre nós
+                    <img class="list-group__arrow" src="arrow-up-right.svg" alt="Abrir página Sobre nós">
+                </a>
+            </li>
+            <li class="list-group__item">
+                <a class="list-group__item__link" routerLink="/voluntario">Seja voluntário
+                    <img class="list-group__arrow" src="arrow-up-right.svg" alt="Abrir página Seja voluntário">
+                </a>
+            </li>
+            <li class="list-group__item">
+                <a class="list-group__item__link" routerLink="/contato">Contato
+                    <img class="list-group__arrow" src="arrow-up-right.svg" alt="Abrir página para contato">
+                </a>
+            </li>
+            <li class="list-group__item">
+                <a class="list-group__item__link" routerLink="/repotar">Reportar bug
+                    <img class="list-group__arrow" src="arrow-up-right.svg" alt="Abrir página reportar bug">
+                </a>
+            </li>
+        </ul>
+        
+        <app-social-component></app-social-component>
+        <app-footer-component></app-footer-component>
+
+        <app-custom-modal title="Grupos" [isOpen]="showModal" (modalClose)="closeModal()">
+            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>
+            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>
+            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>
+            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>
+        </app-custom-modal>
+    </div>
+
+
+</section>

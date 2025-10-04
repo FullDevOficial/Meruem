@@ -1,0 +1,16 @@
+.section-social-media {
+    display: flex;
+    gap: 0.5em;
+
+    img {
+        width: 16px;
+    }
+}
+
+:host ::ng-deep .section-social-media .button {
+    width: 32px;
+    height: 32px;
+    padding: 0.67em;
+    justify-content: center;
+    box-sizing: border-box;
+}
