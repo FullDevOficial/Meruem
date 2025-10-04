@@ -27,8 +27,8 @@
       </div>
     </header>
 
-    <app-grupos [showIcon]="true">Geral 1</app-grupos>
-    <app-grupos [src]="'codequeens.png'" [showIcon]="true">Code Queens</app-grupos>
+    <app-grupos [showIcon]="true" [groupName]="'Geral 1'">Geral 1</app-grupos>
+    <app-grupos [src]="'codequeens.png'" [showIcon]="true" [groupName]="'Code Queens'">Code Queens</app-grupos>
 
     <app-button class="home__button" (click)="openModal()">Exibir todos os grupos</app-button>
 
@@ -53,11 +53,52 @@
     </section>
     <app-footer></app-footer>
 
-    <app-modal-generic [title]="'Grupos'" [isOpen]="showModal" (close)="closeModal()">
-      <app-grupos [parentType]="'modal'" [src]="'codequeens.png'">Code Queens</app-grupos>
-      <app-grupos [parentType]="'modal'" [src]="'codequeens.png'">Code Queens</app-grupos>
-      <app-grupos [parentType]="'modal'" [src]="'codequeens.png'">Code Queens</app-grupos>
-      <app-grupos [parentType]="'modal'" [src]="'codequeens.png'">Code Queens</app-grupos>
+    <app-modal-generic 
+      [title]="'Grupos'" 
+      [isOpen]="showModal" 
+      [size]="'xl'" 
+      (close)="closeModal()">
+      
+      <div slot="body" class="grupos-modal-content">
+        <app-grupos [parentType]="'modal'" [groupName]="'Tech Beginners'">Tech Beginners</app-grupos>
+        <app-grupos [parentType]="'modal'" [groupName]="'React Masters'">React Masters</app-grupos>
+        <app-grupos [parentType]="'modal'" [groupName]="'Python Devs'">Python Devs</app-grupos>
+        <app-grupos [parentType]="'modal'" [groupName]="'Mobile Dev'">Mobile Dev</app-grupos>
+        <app-grupos [parentType]="'modal'" [groupName]="'Full Stack Devs'">Full Stack Devs</app-grupos>
+        <app-grupos [parentType]="'modal'" [groupName]="'UI/UX Design'">UI/UX Dev</app-grupos>
+        <app-grupos [parentType]="'modal'" [groupName]="'DevOps Group'">DevOps Group</app-grupos>
+        <app-grupos [parentType]="'modal'" [groupName]="'AI/ML Lab'">AI/ML Lab</app-grupos>
+      </div>
     </app-modal-generic>
   </div>
+
+  <style>
+    .grupos-modal-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-height: 60vh;
+      overflow-y: auto;
+      padding: 8px 0;
+      
+      /* Scrollbar personalizada */
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: #666;
+        border-radius: 4px;
+      }
+      
+      &::-webkit-scrollbar-thumb:hover {
+        background: #888;
+      }
+    }
+  </style>
 </section>

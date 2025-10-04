@@ -1,0 +1,58 @@
+<app-modal-generic 
+  [isOpen]="isOpen"
+  [title]="groupName"
+  [showBanner]="true"
+  [bannerText]="'Para participar do grupo, preencha os campos abaixo.'"
+  [showFooter]="false"
+  (close)="onClose()"
+  size="md">
+  
+  <!-- Conteúdo do Modal -->
+  <div slot="body" class="modal-content">
+    <!-- Campo Nome -->
+    <div class="input-group">
+      <label class="input-label">Nome:</label>
+      <mat-form-field appearance="outline" class="full-width">
+        <input matInput 
+               placeholder="Insira seu nome" 
+               [formControl]="nomeControl"
+               type="text">
+      </mat-form-field>
+    </div>
+
+    <!-- Campo Telefone -->
+    <div class="input-group">
+      <label class="input-label">Número:</label>
+      <div class="phone-input-container">
+        <mat-form-field appearance="outline" class="phone-country">
+          <input matInput 
+                 [formControl]="paisControl"
+                 placeholder="+55"
+                 type="tel">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="phone-number">
+          <input matInput 
+                 placeholder="(21) 9 88460135" 
+                 [formControl]="telefoneControl"
+                 type="tel">
+          <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- Checkbox de termos -->
+    <div class="checkbox-container">
+      <mat-checkbox [formControl]="termosControl">
+        Concordo com os termos de usuário
+      </mat-checkbox>
+    </div>
+
+    <!-- Botão de confirmação -->
+    <button 
+      class="confirm-button-modal" 
+      (click)="onConfirm()"
+      [disabled]="!isFormValid()">
+      {{ confirmButtonText }}
+    </button>
+  </div>
+</app-modal-generic>

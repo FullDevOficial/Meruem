@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #2a2a2a; // Cor escura do fundo do modal
+  background-color: #2a2a2a;
   border-radius: 4px;
   z-index: 1000;
   max-width: 90%;
@@ -11,14 +11,21 @@
   height: 416px;
   color: white;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  overflow: visible;
   font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
 
   // Tablet sizes
-  &-sm { width: 320px; }
-  &-md { width: 450px; }
-  &-lg { width: 600px; }
-  &-xl { width: 800px; }
+  &-sm { width: 320px; height: auto; }
+  &-md { width: 450px; height: 416px; }
+  &-lg { width: 600px; height: auto; }
+  &-xl { 
+    width: 900px; 
+    height: 80vh; 
+    max-height: 700px;
+    min-height: 500px;
+  }
 
   &__backdrop {
     position: fixed;
@@ -67,10 +74,10 @@
   }
 
   &__banner {
-    background-color: #D77E00; // Cor laranja sólida
+    background-color: #D77E00;
     color: white;
     padding: 8px;
-    margin: 0 32px; // Margem de 32px nas laterais
+    margin: 0 32px; 
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -79,11 +86,11 @@
     height: 40px;
     display: flex;
     align-items: center;
-    box-sizing: border-box; // Inclui padding no cálculo da largura
+    box-sizing: border-box;
   }
 
   &__body {
-    padding: 24px 32px;
+    padding: 24px 32px 40px 32px; 
     font-size: 16px;
     line-height: 1.6;
     
@@ -95,7 +102,6 @@
       }
     }
 
-    // Estilos específicos para inputs do Angular Material
     ::ng-deep .mat-mdc-form-field-input-control {
       font-family: 'Inter', sans-serif;
       font-size: 14px;
@@ -159,7 +165,6 @@
         stroke-width: 2px !important;
       }
 
-      // Estados focado/hover
       &.mat-focused,
       &.mat-mdc-form-field-should-float {
         .mat-mdc-form-field-outline-thick {
@@ -192,7 +197,7 @@
         }
 
         ::ng-deep .mat-checkbox-label {
-          color: #EDEEEE !important;
+          color: white !important;
           font-family: 'Inter', sans-serif !important;
           font-size: 14px !important;
           font-weight: 400 !important;
@@ -205,14 +210,15 @@
     padding: 24px 32px;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    min-height: 80px; // Garante altura mínima para o footer ser visível
+    background-color: transparent; 
 
     .confirm-button {
       background-color: #B22D00;
       color: white;
       border: none;
-      width: 386px;
+      width: 350px;
       height: 40px;
       border-radius: 4px;
       font-family: 'Inter', sans-serif;
@@ -220,8 +226,8 @@
       font-weight: 400;
       cursor: pointer;
       transition: all 0.2s ease;
-      margin-top: 8px;
-      margin: 24px 0 0 0;
+      margin: 8px auto 0 auto;
+      display: block;
 
       &:hover:not(:disabled) {
         transform: translateY(-1px);
@@ -236,7 +242,6 @@
   }
 }
 
-// Responsivo
 @media (max-width: 768px) {
   .modal {
     width: 90%;

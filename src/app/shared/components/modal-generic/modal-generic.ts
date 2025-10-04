@@ -14,7 +14,7 @@ export class ModalGenericComponent {
   @Input() showBanner?: boolean = false;
   @Input() bannerText?: string = '';
   @Input() showHeader?: boolean = true;
-  @Input() showFooter?: boolean = false;
+  @Input() showFooter?: boolean = true;
   @Input() disableBackdropClose?: boolean = false;
   @Input() confirmButtonText?: string = 'Confirmar';
   @Input() confirmButtonDisabled?: boolean = false;

@@ -18,8 +18,9 @@
 </section>
 
 <!-- Modal de Inscrição -->
-<app-grupos-membership-modal 
+<app-modal-membership 
     [isOpen]="isMembershipModalOpen"
+    [groupName]="groupName"
     (close)="closeMembershipModal()"
     (confirm)="onMembershipConfirmed($event)">
-</app-grupos-membership-modal>
+</app-modal-membership>
