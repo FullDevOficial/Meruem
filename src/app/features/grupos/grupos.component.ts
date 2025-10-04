@@ -1,0 +1,17 @@
+import { Component, Input } from '@angular/core';
+import { CustomButtonComponent } from "../../shared/components/custom-button/custom-button";
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-grupos-component',
+  imports: [CommonModule, CustomButtonComponent],
+  templateUrl: './grupos.component.html',
+  styleUrl: './grupos.component.scss',
+})
+export class GruposComponent {
+  @Input() text = 'Grupos';
+  @Input() src: "fulldev.png" | "codequeens.png" = "fulldev.png"
+  @Input() parentType: 'home' | 'modal' = 'home';
+  @Input() showIcon= false;
+}
+

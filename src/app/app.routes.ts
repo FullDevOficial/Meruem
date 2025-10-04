@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
 
-import { Home } from './features/home/home';
-import { Sobre } from './features/sobre/sobre';
-import { Contato } from './features/contato/contato';
-import { Voluntario } from './features/voluntario/voluntario';
+import { HomeComponent } from './features/home/home.component';
+import { SobreComponent } from './features/sobre/sobre.component';
+import { ContatoComponent } from './features/contato/contato.component';
+import { VoluntarioComponent } from './features/voluntario/voluntario.component';
 
 export const routes: Routes = [
     {
@@ -13,18 +13,18 @@ export const routes: Routes = [
     },
     {
         path:'home',
-        component: Home
+        component: HomeComponent
     },
     {
         path:'sobre',
-        component: Sobre
+        component: SobreComponent
     },
     {
         path:'contato',
-        component: Contato
+        component: ContatoComponent
     },
     {
         path:'voluntario',
-        component: Voluntario
+        component: VoluntarioComponent
     },
 ];
