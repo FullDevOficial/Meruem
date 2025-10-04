@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { CustomButtonComponent } from "../../shared/components/custom-button/custom-button";
 import { CommonModule } from '@angular/common';
+
+import { CustomButtonComponent } from "../../shared/components/custom-button/custom-button";
 
 @Component({
   selector: 'app-grupos-component',

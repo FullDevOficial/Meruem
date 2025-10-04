@@ -1,30 +1,34 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from './features/home/home.component';
-import { SobreComponent } from './features/sobre/sobre.component';
-import { ContatoComponent } from './features/contato/contato.component';
-import { VoluntarioComponent } from './features/voluntario/voluntario.component';
-
 export const routes: Routes = [
-    {
-        path:'',
-        redirectTo: 'home',
-        pathMatch:'full'
-    },
-    {
-        path:'home',
-        component: HomeComponent
-    },
-    {
-        path:'sobre',
-        component: SobreComponent
-    },
-    {
-        path:'contato',
-        component: ContatoComponent
-    },
-    {
-        path:'voluntario',
-        component: VoluntarioComponent
-    },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('./features/home/home.component').then((m) => m.HomeComponent),
+  },
+  {
+    path: 'sobre',
+    loadComponent: () => import('./features/sobre/sobre.component').then((m) => m.SobreComponent),
+  },
+  {
+    path: 'contato',
+    loadComponent: () => import('./features/contato/contato.component').then((m) => m.ContatoComponent),
+  },
+  {
+    path: 'voluntario',
+    loadComponent: () =>
+      import('./features/voluntario/voluntario.component').then((m) => m.VoluntarioComponent),
+  },
+  {
+    path: 'grupos',
+    loadComponent: () => import('./features/grupos/grupos.component').then((m) => m.GruposComponent),
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
+  },
 ];
