@@ -1,0 +1,138 @@
+::ng-deep {
+  app-modal-volunteer {
+    .modal__body {
+      padding-top: 32px !important;
+    }
+  }
+}
+
+.form-field {
+  margin-bottom: 20px;
+
+  .field-label {
+    display: block;
+    color: #EDEEEE;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  &:first-child {
+    margin-top: 8px;
+  }
+}
+
+.phone-field {
+  .phone-inputs {
+    display: flex;  
+    gap: 16px;
+
+    .country-code {
+      flex: 0 0 90px;
+    }
+
+    .phone-number {
+      flex: 1;
+    }
+  }
+}
+
+.checkbox-container {
+  margin: 24px 0;
+
+  ::ng-deep mat-checkbox {
+    .mat-checkbox-label {
+      color: #EDEEEE !important;
+      font-size: 14px !important;
+    }
+  }
+}
+
+.submit-button {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 24px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: #e55a29;
+  }
+
+  &:disabled {
+    background-color: #404040;
+    color: #666666;
+    cursor: not-allowed;
+  }
+}
+
+// Override dos estilos padrão do Angular Material
+::ng-deep {
+  app-modal-volunteer {
+    .mat-mdc-form-field {
+      display: block;
+      
+      .mat-mdc-text-field-wrapper {
+        background-color: #404040 !important;
+        border-radius: 4px !important;
+        padding: 0 16px;
+        border: 1px solid transparent !important;
+
+        input {
+          color: #EDEEEE !important;
+          font-size: 14px !important;
+          
+          &::placeholder {
+            color: #888888 !important;
+          }
+        }
+      }
+
+      .mat-mdc-form-field-infix {
+        border-top: none !important;
+      }
+
+      &.mat-form-field-invalid {
+        .mat-mdc-text-field-wrapper {
+          border: 1px solid #ff6b35 !important;
+          box-shadow: 0 0 0 1px rgba(255, 107, 53, 0.3) !important;
+        }
+      }
+
+      &.mat-focused {
+        .mat-mdc-text-field-wrapper {
+          border: 1px solid #ff6b35 !important;
+          box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2) !important;
+        }
+      }
+    }
+
+    mat-checkbox {
+      .mat-checkbox-checkmark-path {
+        stroke: white !important;
+      }
+
+      &.mat-checkbox-checked .mat-checkbox-background {
+        background-color: #ff6b35 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .phone-field .phone-inputs {
+    flex-direction: column;
+  }
+
+  .country-code,
+  .phone-number {
+    flex: none !important;
+    width: 100%;
+  }
+}

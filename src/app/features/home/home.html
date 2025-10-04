@@ -60,44 +60,50 @@
       (close)="closeModal()">
       
       <div slot="body" class="grupos-modal-content">
-        <app-grupos [parentType]="'modal'" [groupName]="'Tech Beginners'">Tech Beginners</app-grupos>
-        <app-grupos [parentType]="'modal'" [groupName]="'React Masters'">React Masters</app-grupos>
-        <app-grupos [parentType]="'modal'" [groupName]="'Python Devs'">Python Devs</app-grupos>
-        <app-grupos [parentType]="'modal'" [groupName]="'Mobile Dev'">Mobile Dev</app-grupos>
-        <app-grupos [parentType]="'modal'" [groupName]="'Full Stack Devs'">Full Stack Devs</app-grupos>
-        <app-grupos [parentType]="'modal'" [groupName]="'UI/UX Design'">UI/UX Dev</app-grupos>
-        <app-grupos [parentType]="'modal'" [groupName]="'DevOps Group'">DevOps Group</app-grupos>
-        <app-grupos [parentType]="'modal'" [groupName]="'AI/ML Lab'">AI/ML Lab</app-grupos>
+        <div class="grupos-container">
+          <app-grupos [parentType]="'modal'" [groupName]="'Tech Beginners'">Tech Beginners</app-grupos>
+          <app-grupos [parentType]="'modal'" [groupName]="'React Masters'">React Masters</app-grupos>
+          <app-grupos [parentType]="'modal'" [groupName]="'Python Devs'">Python Devs</app-grupos>
+          <app-grupos [parentType]="'modal'" [groupName]="'Mobile Dev'">Mobile Dev</app-grupos>
+          <app-grupos [parentType]="'modal'" [groupName]="'Full Stack Devs'">Full Stack Devs</app-grupos>
+          <app-grupos [parentType]="'modal'" [groupName]="'UI/UX Design'">UI/UX Dev</app-grupos>
+          <app-grupos [parentType]="'modal'" [groupName]="'DevOps Group'">DevOps Group</app-grupos>
+          <app-grupos [parentType]="'modal'" [groupName]="'AI/ML Lab'">AI/ML Lab</app-grupos>
+        </div>
       </div>
     </app-modal-generic>
   </div>
 
   <style>
     .grupos-modal-content {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      max-height: 60vh;
-      overflow-y: auto;
-      padding: 8px 0;
+      padding: 16px 0;
       
-      /* Scrollbar personalizada */
-      &::-webkit-scrollbar {
-        width: 8px;
-      }
-      
-      &::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 4px;
-      }
-      
-      &::-webkit-scrollbar-thumb {
-        background: #666;
-        border-radius: 4px;
-      }
-      
-      &::-webkit-scrollbar-thumb:hover {
-        background: #888;
+      .grupos-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-height: 60vh;
+        overflow-y: auto;
+        padding-right: 8px;
+        
+        /* Scrollbar personalizada */
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+        
+        &::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 3px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 3px;
+          
+          &:hover {
+            background: rgba(255, 255, 255, 0.5);
+          }
+        }
       }
     }
   </style>

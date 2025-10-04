@@ -17,12 +17,25 @@
   flex-direction: column;
 
   // Tablet sizes
-  &-sm { width: 320px; height: auto; }
-  &-md { width: 450px; height: 416px; }
-  &-lg { width: 600px; height: auto; }
-  &-xl { 
-    width: 900px; 
-    height: 80vh; 
+  &-sm {
+    width: 320px;
+    height: auto;
+  }
+
+  &-md {
+    width: 450px;
+    height: 528px;
+  }
+
+  &-lg {
+    width: 600px;
+    min-height: 500px;
+    height: auto;
+  }
+
+  &-xl {
+    width: 900px;
+    height: 80vh;
     max-height: 700px;
     min-height: 500px;
   }
@@ -43,7 +56,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px 32px 16px;
-    
+
     .modal__title {
       margin: 0;
       font-size: 24px;
@@ -56,7 +69,7 @@
   &__close-btn {
     background: transparent;
     border: none;
-    color: white;
+    color: #EDEEEE;
     cursor: pointer;
     padding: 8px;
     border-radius: 4px;
@@ -75,9 +88,9 @@
 
   &__banner {
     background-color: #D77E00;
-    color: white;
+    color: #EDEEEE;
     padding: 8px;
-    margin: 0 32px; 
+    margin: 0 32px;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -90,13 +103,13 @@
   }
 
   &__body {
-    padding: 24px 32px 40px 32px; 
+    padding: 24px 32px 40px 32px;
     font-size: 16px;
     line-height: 1.6;
-    
+
     .form-field {
       margin-bottom: 20px;
-      
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -106,17 +119,17 @@
       font-family: 'Inter', sans-serif;
       font-size: 14px;
       font-weight: 400;
-      color: white !important;
+      color: #EDEEEE !important;
       background-color: #BABABA !important;
       border-radius: 4px;
-      
+
       .mat-mdc-input-element {
         font-family: 'Inter', sans-serif;
         font-size: 14px;
         font-weight: 400;
         color: #212529 !important;
         background-color: #BABABA !important;
-        
+
         &::placeholder {
           color: rgba(33, 37, 41, 0.7) !important;
         }
@@ -127,20 +140,20 @@
       .mat-mdc-text-field-wrapper {
         background-color: #BABABA !important;
         border-radius: 4px;
-        
+
         .mat-mdc-form-field-flex {
           background-color: #BABABA !important;
-          
+
           .mat-mdc-form-field-infix {
             background-color: #BABABA !important;
-            
+
             input {
               font-family: 'Inter', sans-serif !important;
               font-size: 14px !important;
               font-weight: 400 !important;
               color: #212529 !important;
               background-color: transparent !important;
-              
+
               &::placeholder {
                 color: rgba(33, 37, 41, 0.7) !important;
               }
@@ -148,32 +161,32 @@
           }
         }
       }
-      
+
       .mat-mdc-form-field-label {
-        color: white !important;
+        color: #EDEEEE !important;
         font-family: 'Inter', sans-serif !important;
         font-size: 14px !important;
         font-weight: 400 !important;
       }
-      
+
       .mat-mdc-form-field-outline {
         color: rgba(255, 255, 255, 0.3) !important;
       }
-      
+
       .mat-mdc-form-field-outline-thick {
-        color: white !important;
+        color: #EDEEEE !important;
         stroke-width: 2px !important;
       }
 
       &.mat-focused,
       &.mat-mdc-form-field-should-float {
         .mat-mdc-form-field-outline-thick {
-          color: white !important;
+          color: #EDEEEE !important;
           stroke-width: 2px !important;
         }
 
         .mat-mdc-form-field-infix input {
-  color: #212529 !important;
+          color: #212529 !important;
         }
 
         .mat-mdc-form-field-input-element {
@@ -189,9 +202,9 @@
 
       mat-checkbox {
         .mat-checkbox-frame {
-          border-color: white;
+          border-color: #EDEEEE !important;
         }
-        
+
         &.mat-checked .mat-checkbox-background {
           background-color: #ff6b35;
         }
@@ -212,7 +225,7 @@
     justify-content: center;
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: transparent; 
+    background-color: transparent;
 
     .confirm-button {
       background-color: #B22D00;
@@ -246,14 +259,14 @@
   .modal {
     width: 90%;
     margin: 20px;
-    
+
     &__header,
     &__body,
     &__footer {
       padding-left: 20px;
       padding-right: 20px;
     }
-    
+
     &__banner {
       padding: 16px 20px;
     }

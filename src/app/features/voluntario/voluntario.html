@@ -77,36 +77,9 @@
     <app-footer></app-footer>
   </div>
 
-  <app-modal-generic [title]="'Seja voluntário'" [isOpen]="showModal" (close)="closeModal()">
-    <form class="formulario">
-      <label for="name"
-        >Nome:
-        <input type="text" placeholder="Insira seu nome" />
-      </label>
-      <label for="email"
-        >E-mail:
-        <input type="email" placeholder="Insira seu E-mail" />
-      </label>
-      <label for="linkedin"
-        >Linkedin:
-        <input type="url" placeholder="Insira seu Linkedin" />
-      </label>
-      <div class="telephone">
-        <label for="ddd telephone">Número:</label>
-        <div>
-          <input type="number" name="ddd" placeholder="+55" />
-          <input type="number" name="telephone" placeholder="(21) 9 88460135" />
-        </div>
-      </div>
-
-      <div class="formulario__termo">
-        <input type="checkbox" name="termo" />
-        <label for="termo">Concordo com os termos de usuário </label>
-      </div>
-
-      <hr />
-
-      <app-button [color]="'primary'">Enviar</app-button>
-    </form>
-  </app-modal-generic>
+  <app-modal-volunteer 
+    [isOpen]="showModal" 
+    (close)="closeModal()"
+    (submit)="onFormSubmit($event)">
+  </app-modal-volunteer>
 </section>

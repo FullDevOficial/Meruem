@@ -14,7 +14,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: white;
+  color: #EDEEEE;
   margin: 0;
   padding: 2px;
 }
@@ -54,8 +54,7 @@
   font-weight: 400;
   cursor: pointer;
   transition: all 0.2s ease;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 8px;
 
   &:hover:not(:disabled) {
     transform: translateY(-1px);
@@ -82,9 +81,10 @@
 
 .checkbox-container {
   margin-top: 16px;
+  margin-bottom: 8px;
   
   mat-checkbox {
-    color: white !important;
+    color: #EDEEEE !important;
     
     ::ng-deep .mat-checkbox-frame {
       border-color: white !important;
@@ -95,7 +95,7 @@
     }
     
     ::ng-deep .mat-checkbox-label {
-      color: white !important;
+      color: #EDEEEE !important;
       font-size: 16px;
     }
   }
@@ -103,7 +103,7 @@
 
 .confirm-button {
   background: linear-gradient(135deg, #ff6b35, #e74c3c);
-  color: white;
+  color: #EDEEEE;
   border: none;
   padding: 14px 32px;
   border-radius: 6px;
@@ -138,14 +138,14 @@
   }
   
   .mat-mdc-input-element {
-    color: white !important;
+    color: #EDEEEE !important;
   }
   
   .mat-mdc-form-field-label {
-    color: white !important;
+    color: #EDEEEE !important;
   }
   
   .mat-mdc-form-field-input-control {
-    color: white !important;
+    color: #EDEEEE !important;
   }
 }
