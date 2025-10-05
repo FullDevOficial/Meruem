@@ -60,7 +60,7 @@
         <app-social-component></app-social-component>
         <app-footer-component></app-footer-component>
 
-        <app-custom-modal title="Grupos" [isOpen]="showModal" (modalClose)="closeModal()">
+        <app-custom-modal title="Grupos" [isOpen]="showModal" (closeModal)="closeModal()">
             <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>
             <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>
             <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>

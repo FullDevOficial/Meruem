@@ -11,10 +11,10 @@ export class ModalComponent {
   @Input() title?: string = 'Title';
   @Input() size: 'sm' | 'md' | 'lg' = 'md';
 
-  @Output() close = new EventEmitter<void>();
+  @Output() closeModal = new EventEmitter<void>();
   @Input() isOpen: boolean = false;
 
   onClose() {
-    this.close.emit();
+    this.closeModal.emit();
   }
 }
