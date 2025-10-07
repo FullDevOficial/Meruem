@@ -82,15 +82,7 @@
   padding: 0.57em 1.72em;
   font-size: var(--font-size-small);
 
-  &__content .button {
-    width: auto;
-    margin-top: 1em;
-  }
-
   & .formulario .button {
-    width: 100%;
     justify-content: center;
-    font-size: var(--font-size-small);
-    margin-top: 1em;
   }
 }

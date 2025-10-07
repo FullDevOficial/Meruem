@@ -54,6 +54,7 @@
       <app-custom-button-component 
                 text="Entrar em contato" 
                 color="primary" 
+                sizes="medium"
                 (buttonClick)="openModal()">
             </app-custom-button-component>
     </article>
@@ -86,14 +87,13 @@
                 </div>
             </div>
 
-      <div class="formulario__termo">
-        <input type="checkbox" name="termo" />
-        <label for="termo">Concordo com os termos de usuário </label>
-      </div>
+          <div class="formulario__termo">
+            <input type="checkbox" name="termo" />
+            <label for="termo">Concordo com os termos de usuário </label>
+          </div>
 
-      <hr />
-
-            <app-custom-button-component text="Enviar" [color]="'primary'"></app-custom-button-component>
+          <hr />
+            <app-custom-button-component sizes="large" text="Enviar" [color]="'primary'"></app-custom-button-component>
         </form>
     </app-custom-modal>
 </section>

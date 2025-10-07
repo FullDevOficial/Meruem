@@ -22,10 +22,16 @@ import { MaterialModule } from '../../material.module';
     }
 
     @if(!routerLink && !href){
-    <button [type]="type" [ngClass]="color" class="button" [disabled]="loading" (click)="onClick()">
-      @if (iconSrc) { <img [src]="iconSrc" [alt]="iconAlt"> } @else { {{ text }}  }
+    <button 
+    [type]="type" 
+    [ngClass]="[color, sizes]" 
+    class="button" 
+    [disabled]="state === 'disabled' || state === 'loading'"
+    (click)="onClick()"
+    >
+      @if (iconSrc && state !== "loading") { <img [src]="iconSrc" [alt]="iconAlt"> } @else { {{ text }}  }
       @if (showIcon) { <img src="link-external.svg" alt="Icone link externo"> }
-      @if (loading) {<mat-spinner diameter="20"></mat-spinner>}
+      @if (state === "loading") {<mat-spinner diameter="20"></mat-spinner>}
       
     </button>
     }
@@ -40,7 +46,8 @@ export class CustomButtonComponent {
   @Input() label: string = "Entrar no grupo";
   @Input() type: "button" | "submit" = "button";
   @Input() color: "link" | "primary" | "secundary" | "warning" = "link";
-  @Input() loading = false;
+  @Input() sizes: "small" | "medium" | "large" = "small"
+  @Input() state: "loading" | "normal" | "disabled" = "normal";
 
   //Link
   @Input() routerLink?: string;  /* Link interno */
