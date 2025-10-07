@@ -5,10 +5,11 @@ import { CustomButtonComponent } from "../../shared/components/custom-button/cus
 import { FooterComponent } from "../../shared/components/footer/footer-component";
 import { ModalComponent } from "../../shared/components/custom-modal/custom-modal";
 import { SocialComponent } from "../../shared/components/social-component/social-component";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home-component',
-  imports: [GruposComponent, CustomButtonComponent, GruposComponent, FooterComponent, ModalComponent, SocialComponent],
+  imports: [GruposComponent, CustomButtonComponent, GruposComponent, FooterComponent, ModalComponent, SocialComponent, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

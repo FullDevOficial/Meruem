@@ -1,17 +1,32 @@
 <section class="section-social-media">
-    <app-custom-button-component href="#">
-        <img class="section-social-media__img" src="github.svg" alt="Ir a página do Github">
+    <app-custom-button-component 
+    (buttonClick)="openExternalLink(socialLinks.github)" 
+    [iconSrc]="'github.svg'"
+    iconAlt="Ir a página do Github"
+    >
     </app-custom-button-component>
-    <app-custom-button-component href="#">
-        <img class="section-social-media__img" src="youtube.svg" alt="Ir a página do Youtube">
+    <app-custom-button-component 
+    (buttonClick)="openExternalLink(socialLinks.youtube)"
+    [iconSrc]="'youtube.svg'"
+    iconAlt="Ir a página do Youtube"
+    >
     </app-custom-button-component>
-    <app-custom-button-component href="#">
-        <img class="section-social-media__img" src="linkedin.svg" alt="Ir a página do Linkedin">
+    <app-custom-button-component 
+    (buttonClick)="openExternalLink(socialLinks.linkedin)"
+    [iconSrc]="'linkedin.svg'"
+    iconAlt="Ir a página do Linkedin"
+    >
     </app-custom-button-component>
-    <app-custom-button-component href="#">
-        <img class="section-social-media__img" src="instagram.svg" alt="Ir a página do Instagram">
+    <app-custom-button-component 
+    (buttonClick)="openExternalLink(socialLinks.instagram)"
+    [iconSrc]="'instagram.svg'"
+    iconAlt="Ir a página do Instagram"
+    >
     </app-custom-button-component>
-    <app-custom-button-component href="#">
-        <img class="section-social-media__img" src="discord.svg" alt="Ir a página do Discord">
+    <app-custom-button-component 
+    (buttonClick)="openExternalLink(socialLinks.discord)"
+    [iconSrc]="'discord.svg'"
+    iconAlt="Ir a página do Discord"
+    >
     </app-custom-button-component>
 </section>

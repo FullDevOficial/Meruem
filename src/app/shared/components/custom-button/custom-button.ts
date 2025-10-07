@@ -6,7 +6,7 @@ import { MaterialModule } from '../../material.module';
 @Component({
   selector: 'app-custom-button-component',
   imports: [MaterialModule, CommonModule, RouterModule,],
-  standalone:true,
+  standalone: true,
   styleUrl: './custom-button.scss',
   template: `
     @if(routerLink){
@@ -23,8 +23,7 @@ import { MaterialModule } from '../../material.module';
 
     @if(!routerLink && !href){
     <button [type]="type" [ngClass]="color" class="button" [disabled]="loading" (click)="onClick()">
-      {{ text }}
-
+      @if (iconSrc) { <img [src]="iconSrc" [alt]="iconAlt"> } @else { {{ text }}  }
       @if (showIcon) { <img src="link-external.svg" alt="Icone link externo"> }
       @if (loading) {<mat-spinner diameter="20"></mat-spinner>}
       
@@ -34,6 +33,9 @@ import { MaterialModule } from '../../material.module';
 })
 export class CustomButtonComponent {
   @Input() text = 'Botão';
+  @Input() iconSrc?: string;
+  @Input() iconAlt: string = "";
+
   @Input() showIcon = false;
   @Input() label: string = "Entrar no grupo";
   @Input() type: "button" | "submit" = "button";
