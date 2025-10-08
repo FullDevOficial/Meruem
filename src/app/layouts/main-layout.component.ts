@@ -8,11 +8,11 @@ import { FooterComponent, NavMenuComponent } from '../shared/components';
   imports: [RouterOutlet, NavMenuComponent, FooterComponent],
   template: `
     <div class="layout">
-      <app-nav-menu />
+      <app-nav-menu-component />
       <main class="content">
         <router-outlet />
       </main>
-      <app-footer />
+      <app-footer-component />
     </div>
   `,
   styles: [
