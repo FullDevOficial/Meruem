@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CustomButtonComponent } from "../../shared/components/custom-button/custom-button";
+import { CustomButtonComponent } from '../../shared/components/custom-button/custom-button';
 
 @Component({
   selector: 'app-grupos-component',
@@ -11,8 +11,7 @@ import { CustomButtonComponent } from "../../shared/components/custom-button/cus
 })
 export class GruposComponent {
   @Input() text = 'Grupos';
-  @Input() src: "fulldev.png" | "codequeens.png" = "fulldev.png"
+  @Input() src: 'fulldev.png' | 'codequeens.png' = 'fulldev.png';
   @Input() parentType: 'home' | 'modal' = 'home';
-  @Input() showIcon= false;
+  @Input() showIcon = false;
 }
-
