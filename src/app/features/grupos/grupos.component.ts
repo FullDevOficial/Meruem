@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 import { CustomButtonComponent } from '../../shared/components/custom-button/custom-button';
 
