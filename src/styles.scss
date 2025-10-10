@@ -99,3 +99,19 @@ a {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mdc-checkbox__background{
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #C8C9CB !important;
+  border-radius: 0.29em !important;
+  border: 1px solid #717478 !important;
+  padding: 0 !important;
+}
+
+.mdc-label{
+  color: #EDEEEE !important;
+  font-family: var(--font-base) !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+}
