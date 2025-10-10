@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 // Only export what's actually being used
 const MaterialModules = [
@@ -14,6 +15,7 @@ const MaterialModules = [
   MatIconModule,
   MatToolbarModule,
   MatCardModule,
+  MatCheckboxModule,
 ];
 
 @NgModule({
