@@ -9,23 +9,25 @@ import { CommonModule } from '@angular/common';
   imports: [MaterialModule, ReactiveFormsModule, CommonModule],
   styleUrl: './custom-input.scss',
   template: `
-    <mat-form-field>
-      <mat-label> {{ label }} </mat-label>
+      <div class="input-container">
+        <label> {{ label }} </label>
+        <mat-form-field>
 
-      @if(type === 'textarea') { 
-        <textarea matInput [formControl]="control" placeholder="placeholder"></textarea> 
-      }
-      @if(type !== 'textarea') {
-        <input matInput [formControl]="control" [placeholder]="placeholder" [type]="type" [attr.minlength]="minlength" [attr.maxlength]="maxlength"/> 
-      }
-      @if(required === true) {<mat-hint> O campo {{ label}}  é obrigatório</mat-hint> }
-      
-      <!-- Utilizado para informações adicionais sobre o campo oferecendo dicas para o usuário -->
-      @if(hint) { <mat-hint>{{ hint }}</mat-hint> }
-      <!-- Utilizado para mensagens de erro -->
-      <mat-error> {{ errorMessage }}  </mat-error>
+          @if(type === 'textarea') { 
+            <textarea matInput [formControl]="control" placeholder="placeholder"></textarea> 
+          }
+          @if(type !== 'textarea') {
+            <input  class="input" matInput [formControl]="control" [placeholder]="placeholder" [type]="type" [attr.minlength]="minlength" [attr.maxlength]="maxlength"/> 
+          }
+          @if(required === true) {<mat-hint> O campo {{ label}}  é obrigatório</mat-hint> }
+          
+          <!-- Utilizado para informações adicionais sobre o campo oferecendo dicas para o usuário -->
+          @if(hint) { <mat-hint>{{ hint }}</mat-hint> }
+          <!-- Utilizado para mensagens de erro -->
+          <mat-error> {{ errorMessage }}  </mat-error>
 
-    </mat-form-field>
+        </mat-form-field>
+      </div>
   `
 })
 export class InputComponent {
