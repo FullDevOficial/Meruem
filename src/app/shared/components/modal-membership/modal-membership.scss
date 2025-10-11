@@ -1,3 +1,12 @@
+::ng-deep {
+  app-modal-membership {
+    // Remove padding do body quando está carregando
+    .modal__body:has(app-loading-validation) {
+      padding: 0 !important;
+    }
+  }
+}
+
 .modal-content {
   display: flex;
   flex-direction: column;
@@ -97,6 +106,14 @@
     ::ng-deep .mat-checkbox-label {
       color: #EDEEEE !important;
       font-size: 16px;
+    }
+
+    ::ng-deep .mdc-label {
+      color: #EDEEEE !important;
+    }
+
+    ::ng-deep .mdc-checkbox__label {
+      color: #EDEEEE !important;
     }
   }
 }

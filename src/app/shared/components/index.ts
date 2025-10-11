@@ -4,4 +4,7 @@ export * from './list-group/list-group';
 export * from './modal-generic/modal-generic';
 export * from './modal-membership/modal-membership';
 export * from './modal-volunteer/modal-volunteer';
+export * from './modal-contact/modal-contact';
 export * from './nav-menu/nav-menu';
+export * from './loading-validation/loading-validation';
+export * from './modal-success/modal-success';

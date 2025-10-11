@@ -1,11 +1,19 @@
 <app-modal-generic 
   [isOpen]="isOpen"
-  [title]="'Seja voluntário'"
+  [title]="isValidating ? '' : 'Seja voluntário'"
   [showBanner]="false"
   [showFooter]="false"
+  [showHeader]="!isValidating"
   (close)="onClose()"
-  size="lg">
+  [size]="isValidating ? 'md' : 'lg'">
   
+  <!-- Loading/Validação -->
+  @if (isValidating) {
+    <app-loading-validation></app-loading-validation>
+  }
+
+  <!-- Formulário -->
+  @if (!isValidating) {
   <!-- Campo Nome -->
   <div class="form-field">
     <label class="field-label">Nome:</label>
@@ -92,4 +100,16 @@
     [disabled]="!isFormValid()">
     Enviar
   </button>
+  }
 </app-modal-generic>
+
+<!-- Modal de Sucesso -->
+<app-modal-success
+  [isOpen]="showSuccess"
+  [title]="'Pronto! Estamos de olho em você.'"
+  [message]="'Você foi adicionado ao nosso banco de dados. Assim que surgir uma oportunidade, entraremos em contato'"
+  [primaryButtonText]="'Fechar'"
+  [secondaryButtonText]="''"
+  (close)="onSuccessClose()"
+  (primaryAction)="onSuccessClose()">
+</app-modal-success>

@@ -11,7 +11,7 @@
   height: 416px;
   color: white;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  overflow: visible;
+  overflow: hidden;
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
@@ -23,8 +23,9 @@
   }
 
   &-md {
-    width: 450px;
-    height: 528px;
+    width: 540px;
+    height: auto;
+    min-height: 324px;
   }
 
   &-lg {

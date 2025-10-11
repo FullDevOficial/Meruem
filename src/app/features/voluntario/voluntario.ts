@@ -30,8 +30,6 @@ export class VoluntarioComponent {
     aceitartermos: boolean;
   }) {
     console.log('Dados do voluntário:', formData);
-    // implementar a lógica de envio dos dados
-    alert('Sua candidatura foi enviada com sucesso! Entraremos em contato em breve.');
-    this.closeModal();
+    // Implementar a lógica de envio dos dados (API, etc)
   }
 }

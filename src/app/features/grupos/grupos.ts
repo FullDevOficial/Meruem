@@ -27,6 +27,12 @@ export class GruposComponent {
   }
 
   onMembershipConfirmed(data: {nome: string, telefone: string, pais: string, grupo: string}) {
+    console.log('Usuário adicionado ao grupo:', data);
+  }
+
+  onAccessGroup() {
+    console.log('Acessar grupo:', this.groupName);
+    // Implementar a lógica de acesso ao grupo (API, etc)
     this.closeMembershipModal();
   }
 }

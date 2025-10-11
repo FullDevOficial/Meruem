@@ -22,5 +22,6 @@
     [isOpen]="isMembershipModalOpen"
     [groupName]="groupName"
     (close)="closeMembershipModal()"
-    (confirm)="onMembershipConfirmed($event)">
+    (confirm)="onMembershipConfirmed($event)"
+    (accessGroup)="onAccessGroup()">
 </app-modal-membership>

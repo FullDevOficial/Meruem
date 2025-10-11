@@ -1,13 +1,20 @@
 <app-modal-generic 
   [isOpen]="isOpen"
-  [title]="groupName"
-  [showBanner]="true"
+  [title]="isValidating ? '' : groupName"
+  [showBanner]="!isValidating"
   [bannerText]="'Para participar do grupo, preencha os campos abaixo.'"
   [showFooter]="false"
+  [showHeader]="!isValidating"
   (close)="onClose()"
-  size="lg">
+  [size]="isValidating ? 'md' : 'lg'">
   
+  <!-- Loading/Validação -->
+  @if (isValidating) {
+    <app-loading-validation></app-loading-validation>
+  }
+
   <!-- Conteúdo do Modal -->
+  @if (!isValidating) {
   <div slot="body" class="modal-content">
     <!-- Campo Nome -->
     <div class="input-group">
@@ -68,4 +75,16 @@
       {{ confirmButtonText }}
     </button>
   </div>
+  }
 </app-modal-generic>
+
+<!-- Modal de Sucesso -->
+<app-modal-success
+  [isOpen]="showSuccess"
+  [title]="'Pronto!'"
+  [message]="'Você foi adicionado ao grupo ' + groupName + ' com sucesso.'"
+  [primaryButtonText]="'Acessar'"
+  [secondaryButtonText]="'Fechar'"
+  (close)="onSuccessClose()"
+  (primaryAction)="onAccessGroup()">
+</app-modal-success>

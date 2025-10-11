@@ -9,6 +9,8 @@ import { ModalGenericComponent } from '../modal-generic/modal-generic';
 import { OnChanges, SimpleChanges } from '@angular/core';
 import { PhoneMaskDirective } from '../../directives/phone-mask.directive';
 import { CountryCodeMaskDirective } from '../../directives/country-code-mask.directive';
+import { LoadingValidationComponent } from '../loading-validation/loading-validation';
+import { ModalSuccessComponent } from '../modal-success/modal-success';
 
 @Component({
   selector: 'app-modal-membership',
@@ -22,7 +24,9 @@ import { CountryCodeMaskDirective } from '../../directives/country-code-mask.dir
     MatIconModule,
     ModalGenericComponent,
     PhoneMaskDirective,
-    CountryCodeMaskDirective
+    CountryCodeMaskDirective,
+    LoadingValidationComponent,
+    ModalSuccessComponent
   ],
   templateUrl: './modal-membership.html',
   styleUrl: './modal-membership.scss'
@@ -33,6 +37,10 @@ export class ModalMembershipComponent implements OnChanges {
   @Input() groupName: string = 'Geral'; 
   @Output() close = new EventEmitter<void>();
   @Output() confirm = new EventEmitter<{nome: string, telefone: string, pais: string, grupo: string}>();
+  @Output() accessGroup = new EventEmitter<void>();
+
+  isValidating: boolean = false;
+  showSuccess: boolean = false;
 
   nomeControl = new FormControl('', [Validators.required, Validators.minLength(2)]);
   telefoneControl = new FormControl('', [Validators.required, Validators.pattern(/^\(\d{2}\)\s\d{4,5}-\d{4}$/)]);
@@ -42,12 +50,27 @@ export class ModalMembershipComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (changes['isOpen'] && !changes['isOpen'].currentValue) {
       this.resetForm();
+      this.isValidating = false;
+      this.showSuccess = false;
     }
   }
 
   onClose() {
     this.resetForm();
+    this.isValidating = false;
+    this.showSuccess = false;
     this.close.emit();
+  }
+
+  onSuccessClose() {
+    this.showSuccess = false;
+    this.onClose();
+  }
+
+  onAccessGroup() {
+    this.showSuccess = false;
+    this.accessGroup.emit();
+    this.onClose();
   }
 
   private resetForm() {
@@ -91,13 +114,28 @@ export class ModalMembershipComponent implements OnChanges {
 
   onConfirm() {
     if (this.isFormValid()) {
-      this.confirm.emit({
+      this.isValidating = true;
+      
+      const formData = {
         nome: this.nomeControl.value ? this.nomeControl.value.trim() : '',
         telefone: this.telefoneControl.value ? this.telefoneControl.value.trim() : '',
         pais: this.paisControl.value ? this.paisControl.value.trim() : '+55',
         grupo: this.groupName
-      });
-      this.resetForm();
+      };
+      
+      // Simula validação (2 segundos)
+      setTimeout(() => {
+        // Fecha o modal principal e mostra o modal de sucesso
+        this.isOpen = false;
+        this.isValidating = false;
+        this.resetForm();
+        
+        // Pequeno delay para suavizar a transição
+        setTimeout(() => {
+          this.showSuccess = true;
+          this.confirm.emit(formData);
+        }, 100);
+      }, 2000);
     }
   }
 }
