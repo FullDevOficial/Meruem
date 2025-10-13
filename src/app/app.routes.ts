@@ -16,7 +16,8 @@ export const routes: Routes = [
   },
   {
     path: 'contato',
-    loadComponent: () => import('./features/contato/contato.component').then((m) => m.ContatoComponent),
+    loadComponent: () =>
+      import('./features/contato/contato.component').then((m) => m.ContatoComponent),
   },
   {
     path: 'voluntario',
@@ -25,7 +26,8 @@ export const routes: Routes = [
   },
   {
     path: 'grupos',
-    loadComponent: () => import('./features/grupos/grupos.component').then((m) => m.GruposComponent),
+    loadComponent: () =>
+      import('./features/grupos/grupos.component').then((m) => m.GruposComponent),
   },
   {
     path: '**',

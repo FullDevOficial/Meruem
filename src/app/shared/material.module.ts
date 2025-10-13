@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 // Only export what's actually being used
 const MaterialModules = [
@@ -20,6 +21,7 @@ const MaterialModules = [
   MatFormFieldModule,
   MatSelectModule,
   MatOptionModule,
+  MatCheckboxModule,
 ];
 
 @NgModule({
