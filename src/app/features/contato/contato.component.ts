@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavMenuComponent } from "../../shared/components/nav-menu/nav-menu-component";
-import { FooterComponent } from "../../shared/components/footer/footer-component";
+import { NavMenuComponent } from '../../shared/components/nav-menu/nav-menu-component';
+import { FooterComponent } from '../../shared/components/footer/footer-component';
 
 @Component({
   selector: 'app-contato-component',

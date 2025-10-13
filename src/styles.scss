@@ -99,3 +99,26 @@ a {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-input-element input .mat-mdc-form-field-input-control .mdc-text-field__input .cdk-text-field-autofill-monitored {
+  margin: 0 !important;
+} 
+
+.mat-mdc-form-field-infix {
+  padding: 0.5rem 0 !important;
+  height: 44px !important;
+  box-sizing: border-box;
+  color: #696969 !important;
+}
+
+.mat-mdc-text-field-wrapper .mdc-text-field .mdc-text-field--filled .mdc-text-field--no-label {
+  height: 44px !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled){
+  background-color: var(--light-gray);
+}
+
+.mdc-text-field--filled {
+  height: 44px !important;
+}
