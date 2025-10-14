@@ -1,38 +1,3 @@
-.section-voluntary {
-  &__content {
-    font-size: var(--font-size-capition);
-    color: #989898;
-    padding: 1.34em;
-    border: 1px solid var(--medium-dark);
-    border-radius: 0.5em;
-    margin-bottom: 10.62em;
-
-    &__section-title {
-      font-size: var(--font-size-capition);
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    &__list {
-      margin: 0;
-      padding: 0 1.5em;
-    }
-
-    &__title {
-      margin: 0;
-      font-size: var(--font-size-xl);
-    }
-  }
-
-  .section-social-media {
-    display: flex;
-    gap: 0.5em;
-  }
-}
-
 .formulario {
   font-size: var(--font-size-small);
   line-height: 1.72em;
