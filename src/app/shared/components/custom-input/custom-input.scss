@@ -10,18 +10,23 @@
 
   label{
     margin-bottom: 0.28em;
-    color: #EDEEEE;  }
-}
+    color: #EDEEEE;
+  }
 
-.input {
-  padding: 0;
-  display: block;
-  box-sizing: border-box;
-  font-size: var(--font-size-small);
-  color: #696969;
-  border: none !important;
-}
+  .input {
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+    font-size: var(--font-size-small);
+    color: #696969;
+    border: none;
+    outline: none;
+  }
 
+  input.input {
+    border: none;
+  }
+}
 
 .input[type='checkbox'] {
   width: auto;
