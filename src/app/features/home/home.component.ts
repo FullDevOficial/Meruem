@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
+import { environment } from '../../../environments/environment';
 import { CustomButtonComponent } from '../../shared/components/custom-button/custom-button';
 import { ModalComponent } from '../../shared/components/custom-modal/custom-modal';
 import { FooterComponent } from '../../shared/components/footer/footer-component';
@@ -22,6 +23,16 @@ import { GruposComponent } from '../grupos/grupos.component';
 })
 export class HomeComponent {
   showModal: boolean = false;
+  appTitle = environment.appTitle;
+  isProduction = environment.production;
+
+  constructor() {
+    if (environment.production) {
+      console.warn('🏠 Home component em produção');
+    } else {
+      console.warn('🏠 Home component em desenvolvimento');
+    }
+  }
 
   openModal() {
     this.showModal = true;
