@@ -54,11 +54,12 @@ body {
 }
 
 body {
+  max-width: 1024px;
   font-family: var(--font-base);
   color: var(--text-color-secondary);
   background-color: var(--black);
   font-size: var(--font-size-medium);
-  margin: 0;
+  margin: auto;
   padding: 0;
   box-sizing: border-box;
   font-weight: 400;
@@ -108,6 +109,11 @@ a {
     margin: 0;
     font-size: var(--font-size-xl);
     font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+
+    }
   }
 
   >div {
@@ -200,4 +206,16 @@ div.mat-mdc-select-panel {
 
 .mdc-text-field--filled {
   height: 44px !important;
+}
+
+.mat-mdc-menu-panel.custom-menu-panel {
+  background-color: var(--black);
+}
+
+button.mat-mdc-menu-item.mat-mdc-menu-item{
+  color: var(--light-gray) ;
+}
+
+button.mat-mdc-menu-item.mat-mdc-menu-item:hover{
+  background-color: var(--medium-dark);
 }
