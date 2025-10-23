@@ -1,8 +1,37 @@
-.section__content__list{
-    list-style-type: disc;
+.section {
 
-    a{
-        text-decoration: underline;
+    &__content {
+        line-height: 100%;
         color: var(--text-color-secondary);
     }
+
+    &__group {
+        margin: 1em 0;
+    }
+
+    &__methods {
+        margin: 0;
+    }
+
+    &__list span {
+        padding: 0 1.5em;
+    } 
+}
+
+.section__methods a,
+.section__list-item--bullet a{
+    text-decoration: underline;
+    color: var(--text-color-secondary);
+}
+
+.section__list-item--bullet::before {
+    content: "•";
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0.5em;
 }

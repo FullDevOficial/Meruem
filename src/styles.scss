@@ -96,12 +96,12 @@ a {
     p {
       margin: 0;
     }
+        
+  }
 
-    &__list {
-      margin: 0;
-      padding: 0 1.5em;
-    }
-
+  &__list {
+    margin: 0;
+    padding: 0 1.5em;
   }
 
   &-sobre__history__title {
@@ -111,12 +111,12 @@ a {
   }
 
   >div {
-    padding: 1em 1.25em;
+    padding: 0 1.25em;
     color: var(--text-color-primary);
   }
 
   &__title {
-    margin: 0.5em 0;
+    margin: 1em 0 0.5em 0;
     font-size: var(--font-size-large);
     font-weight: 400;
   }
