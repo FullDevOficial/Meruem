@@ -166,3 +166,45 @@
     color: #EDEEEE !important;
   }
 }
+
+@media (max-width: 768px) {
+  .phone-input-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .phone-country {
+    width: 100%;
+  }
+
+  .phone-number {
+    width: 100%;
+  }
+
+  .confirm-button-modal {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    gap: 12px;
+  }
+
+  .input-group {
+    gap: 6px;
+  }
+
+  .input-label {
+    font-size: 13px;
+  }
+
+  .phone-input-container {
+    gap: 6px;
+  }
+
+  .checkbox-container {
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+}
