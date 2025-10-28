@@ -23,12 +23,10 @@
   <button class="mobile-menu" matIconButton [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
     <mat-icon>menu</mat-icon>
   </button>
-  <mat-menu #menu="matMenu">
-  <button mat-menu-item [routerLink]="'/home'">Inicio</button>
-  <button mat-menu-item [routerLink]="'/sobre'">Sobre nós</button>
-  <button mat-menu-item [routerLink]="'/voluntario'">Seja voluntário</button>
-  <button mat-menu-item [routerLink]="'/contato'">Contato</button>
+  <mat-menu #menu="matMenu" class="custom-menu-panel">
+    <button mat-menu-item [routerLink]="'/home'">Inicio</button>
+    <button mat-menu-item [routerLink]="'/sobre'">Sobre nós</button>
+    <button mat-menu-item [routerLink]="'/voluntario'">Seja voluntário</button>
+    <button mat-menu-item [routerLink]="'/contato'">Contato</button>
   </mat-menu>
-
-
 </nav>
