@@ -57,8 +57,9 @@
     </div>
 
     <div>
-
         <app-social-component></app-social-component>
         <app-footer-component></app-footer-component>
     </div>
+
+    <app-custom-modal title="Contato" [isOpen]="showModal" (closeModal)="closeModal()"></app-custom-modal>
 </section>
