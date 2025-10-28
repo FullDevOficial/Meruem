@@ -1,38 +1,53 @@
-<section class="home">
+<section class="home" aria-labelledby="header-title">
     <div>
         <header class="header">
             <img class="header__img" src="fulldev.png" alt="logo FullDev">
 
             <div>
-                <h1 class="header__title">FullDev</h1>
-                <div class="header__description-list__item">
-                    <img src="member.svg" alt="Icone membros">
-                    <p>5458 Membros</p>
-                </div>
+                <h1 class="header__title" id="header-title">FullDev</h1>
+                <ul class="header__stats-list">
 
-                <div class="header__description-list__item">
-                    <img src="group-chat.svg" alt="Icone chat">
-                    <p>15 Grupos</p>
+                    <li class="header__stats-list__item">
+                        <img class="header__stats-list__item-icon" src="member.svg" alt=""
+                            aria-hidden="true">
+                        <p class="header__stats-list__item-text">5458 Membros</p>
+                    </li>
 
-                </div>
+                    <li class="header__stats-list__item">
+                        <img class="header__stats-list__item-icon" src="group-chat.svg" alt=""
+                            aria-hidden="true">
+                        <p class="header__stats-list__item-text">15 Grupos</p>
 
-                <div class="header__description-list__item">
-                    <img src="cupcake.svg" alt="Icone cupcake">
-                    <p>Criado em 10/06/2024 20:36 </p>
-                </div>
+                    </li>
 
-                <div class="header__description-list__item">
-                    <img src="laptop-minimalistic.svg" alt="Icone laptop-minimalistc">
-                    <p>By Dev, For Dev</p>
-                </div>
+                    <li class="header__stats-list__item">
+                        <img class="header__stats-list__item-icon" src="cupcake.svg" alt=""
+                            aria-hidden="true">
+                        <p class="header__stats-list__item-text">Criado em 10/06/2024 20:36 </p>
+                    </li>
+
+                    <li class="header__stats-list__item">
+                        <img class="header__stats-list__item-icon" src="laptop-minimalistic.svg"
+                            alt="" aria-hidden="true">
+                        <p class="header__stats-list__item-text">By Dev, For Dev</p>
+                    </li>
+
+                </ul>
             </div>
         </header>
 
-        <app-grupos-component [showIcon]="true" text="Geral 1"></app-grupos-component>
-        <app-grupos-component [src]="'codequeens.png'" [showIcon]="true" text="Code Queens"></app-grupos-component>
+        <section>
+            <app-grupos-component [showIcon]="true" text="Geral 1"></app-grupos-component>
+            <app-grupos-component [src]="'codequeens.png'" [showIcon]="true" text="Code Queens"></app-grupos-component>
 
-        <app-custom-button-component sizes="large" class="home__button" (buttonClick)="openModal()"
-            text="Exibir todos os grupos"></app-custom-button-component>
+            <app-custom-button-component 
+            sizes="large" 
+            class="home__button" 
+            (buttonClick)="openModal()"
+            text="Exibir todos os grupos"
+            aria-haspopup="dialog">
+            </app-custom-button-component>
+        </section>
 
         <ul class="list-group">
             <li class="list-group__item">
@@ -56,15 +71,19 @@
                 </a>
             </li>
         </ul>
-        
+
         <app-social-component></app-social-component>
         <app-footer-component></app-footer-component>
 
         <app-custom-modal title="Grupos" [isOpen]="showModal" (closeModal)="closeModal()">
-            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>
-            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>
-            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>
-            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'" text="Code Queens"></app-grupos-component>
+            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'"
+                text="Code Queens"></app-grupos-component>
+            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'"
+                text="Code Queens"></app-grupos-component>
+            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'"
+                text="Code Queens"></app-grupos-component>
+            <app-grupos-component [parentType]="'modal'" [src]="'codequeens.png'"
+                text="Code Queens"></app-grupos-component>
         </app-custom-modal>
     </div>
 
