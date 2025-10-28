@@ -1,14 +1,14 @@
-<section class="section section-sobre">
+<section class="content-page" aria-labelledby="about-title">
     <app-nav-menu-component></app-nav-menu-component>
     <div class="container">
 
-        <h2 class="section__title">Sobre nós</h2>
-        <div class="section__content">
+        <h2 class="content-page__title" id="about-title">Sobre nós</h2>
+        <div class="content-page__body">
 
-            <div class="section-sobre__history">
-                <h3 class="section-sobre__history__title">História da Comunidade FullDev</h3>
+            <article aria-labelledby="history-title">
+                <h3 class="content-page__subtitle" id="history-title">História da Comunidade FullDev</h3>
 
-                <ul class="section-sobre__history__list">
+                <ul class="content-page__list">
                     <li>A história da FullDev começa com algo simples, quase banal, mas que carregava o potencial de
                         transformar vidas.</li>
                     <li>Em 2024, durante um curso de tecnologia do Santander, Lucas Pedro sentiu a necessidade de ter
@@ -32,15 +32,16 @@
                         aparecer.</li>
 
                 </ul>
-                
-                <app-custom-button-component sizes="medium" [color]="'primary'" text="Entrar em contato"></app-custom-button-component>
-            </div>
+
+                <app-custom-button-component sizes="medium" [color]="'primary'"
+                    text="Entrar em contato"></app-custom-button-component>
+            </article>
 
 
         </div>
-      </div>
-    <div>
-        <app-social-component></app-social-component>
-        <app-footer-component></app-footer-component>
+        <footer>
+            <app-social-component></app-social-component>
+            <app-footer-component></app-footer-component>
+        </footer>
     </div>
 </section>

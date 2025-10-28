@@ -74,51 +74,52 @@ a {
   text-decoration: none;
 }
 
-.section {
+.content-page {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  line-height: 100%;
 
-  &__content {
+  p {
+    margin: 0;
+  }
+
+  &__title {
+    margin: 1em 0 0.5em 0;
+    font-size: var(--font-size-large);
+    font-weight: 400;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+  }
+
+  &__body {
     font-size: var(--font-size-capition);
     color: #989898;
     padding: 1.34em;
     border: 1px solid var(--medium-dark);
     border-radius: 0.5em;
     margin-bottom: 10.62em;
-
-    &__section-title {
-      font-size: var(--font-size-capition);
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    &__list {
-      margin: 0;
-      padding: 0 1.5em;
-    }
-
   }
 
-  &-sobre__history__title {
+  &__list {
     margin: 0;
-    font-size: var(--font-size-xl);
-    font-weight: 400;
+    padding: 0 1.8em;
+    line-height: 100%;
+
+    a {
+      text-decoration: underline;
+      color: var(--text-color-secondary);
+    }
   }
 
   >div {
-    padding: 1em 1.25em;
+    padding: 0 1.25em;
     color: var(--text-color-primary);
-  }
-
-  &__title {
-    margin: 0.5em 0;
-    font-size: var(--font-size-large);
-    font-weight: 400;
   }
 
 }

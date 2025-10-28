@@ -1,8 +1,4 @@
-.section__content__list{
+.content-page__list-item{
     list-style-type: disc;
-
-    a{
-        text-decoration: underline;
-        color: var(--text-color-secondary);
-    }
+    padding: 0 1.8em;
 }
