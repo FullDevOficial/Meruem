@@ -1,3 +1,2 @@
-// Diretivas compartilhadas - apenas estrutura organizacional
-// Exemplo: export * from './highlight.directive';
-export {};
+export * from './phone-mask.directive';
+export * from './country-code-mask.directive';

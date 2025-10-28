@@ -36,15 +36,15 @@ body {
 
 :root {
   --font-base: 'Inter', sans-serif;
-  --light-gray: #bababa;
-  --medium-dark: #4c4c4c;
-  --dark-gray: #1c1c1c;
-  --black: #0d0d0d;
-  --red: #b22d00;
-  --orange: #d77e00;
-  --text-color-primary: #ffffff;
-  --text-color-secondary: #8b949e;
-  --text-color-third: #9198a1;
+  --light-gray: #BABABA;
+  --medium-dark: #4C4C4C;
+  --dark-gray: #1C1C1C;
+  --black: #0D0D0D;
+  --red: #B22D00;
+  --orange: #D77E00;
+  --text-color-primary: #FFFFFF;
+  --text-color-secondary: #8B949E;
+  --text-color-third: #9198A1;
 
   --font-size-capition: 12px;
   --font-size-small: 14px;
@@ -68,6 +68,9 @@ body {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
 }
 
 a {
@@ -76,7 +79,6 @@ a {
 }
 
 .section {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -84,9 +86,9 @@ a {
   &__content {
     font-size: var(--font-size-capition);
     color: #989898;
-    padding: 1.34em;
+    padding: 1.334em;
     border: 1px solid var(--medium-dark);
-    border-radius: 0.5em;
+    border-radius: 0.667em;
     margin-bottom: 10.62em;
 
     &__section-title {
@@ -105,26 +107,29 @@ a {
 
   }
 
-  &-sobre__history__title {
+  &-about__history__title {
     margin: 0;
     font-size: var(--font-size-xl);
     font-weight: 400;
 
     @media (max-width: 768px) {
+
       font-size: 16px;
 
     }
   }
 
   >div {
-    padding: 1em 1.25em;
+    padding: 0 1.25em;
     color: var(--text-color-primary);
   }
 
   &__title {
-    margin: 0.5em 0;
+    margin: 1em 0 0.5em;
     font-size: var(--font-size-large);
     font-weight: 400;
+    line-height: 100%;
+
   }
 
 }
