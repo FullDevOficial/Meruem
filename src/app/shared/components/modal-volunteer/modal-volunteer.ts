@@ -5,7 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ModalGenericComponent } from '../modal-generic/modal-generic';
+import { ModalComponent } from '../custom-modal/custom-modal';
 import { PhoneMaskDirective } from '../../directives/phone-mask.directive';
 import { CountryCodeMaskDirective } from '../../directives/country-code-mask.directive';
 import { LoadingValidationComponent } from '../loading-validation/loading-validation';
@@ -21,14 +21,14 @@ import { ModalSuccessComponent } from '../modal-success/modal-success';
     MatInputModule,
     MatCheckboxModule,
     MatIconModule,
-    ModalGenericComponent,
+    ModalComponent,
     PhoneMaskDirective,
     CountryCodeMaskDirective,
     LoadingValidationComponent,
-    ModalSuccessComponent
+    ModalSuccessComponent,
   ],
   templateUrl: './modal-volunteer.html',
-  styleUrl: './modal-volunteer.scss'
+  styleUrl: './modal-volunteer.scss',
 })
 export class ModalVolunteerComponent implements OnChanges {
   @Input() isOpen: boolean = false;
@@ -48,7 +48,10 @@ export class ModalVolunteerComponent implements OnChanges {
   nomeControl = new FormControl('', [Validators.required, Validators.minLength(2)]);
   emailControl = new FormControl('', [Validators.required, Validators.email]);
   linkedinControl = new FormControl('', [Validators.required]);
-  telefoneControl = new FormControl('', [Validators.required, Validators.pattern(/^\(\d{2}\)\s\d{4,5}-\d{4}$/)]);
+  telefoneControl = new FormControl('', [
+    Validators.required,
+    Validators.pattern(/^\(\d{2}\)\s\d{4,5}-\d{4}$/),
+  ]);
   paisControl = new FormControl('+55', [Validators.required, Validators.pattern(/^\+\d{1,4}$/)]);
   termosControl = new FormControl(false, [Validators.requiredTrue]);
 
@@ -82,12 +85,14 @@ export class ModalVolunteerComponent implements OnChanges {
   }
 
   isFormValid(): boolean {
-    return this.nomeControl.valid && 
-           this.emailControl.valid && 
-           this.linkedinControl.valid &&
-           this.telefoneControl.valid && 
-           this.paisControl.valid && 
-           this.termosControl.valid;
+    return (
+      this.nomeControl.valid &&
+      this.emailControl.valid &&
+      this.linkedinControl.valid &&
+      this.telefoneControl.valid &&
+      this.paisControl.valid &&
+      this.termosControl.valid
+    );
   }
 
   getFieldErrorMessage(fieldControl: FormControl, fieldName: string): string {
@@ -119,23 +124,23 @@ export class ModalVolunteerComponent implements OnChanges {
   onSubmit() {
     if (this.isFormValid()) {
       this.isValidating = true;
-      
+
       const formData = {
         nome: this.nomeControl.value ? this.nomeControl.value.trim() : '',
         email: this.emailControl.value ? this.emailControl.value.trim() : '',
         linkedin: this.linkedinControl.value ? this.linkedinControl.value.trim() : '',
         telefone: this.telefoneControl.value ? this.telefoneControl.value.trim() : '',
         pais: this.paisControl.value ? this.paisControl.value.trim() : '+55',
-        aceitartermos: this.termosControl.value === true
+        aceitartermos: this.termosControl.value === true,
       };
-      
+
       // Simula validação (2 segundos)
       setTimeout(() => {
         // Fecha o modal principal e mostra o modal de sucesso
         this.isOpen = false;
         this.isValidating = false;
         this.resetForm();
-        
+
         // Pequeno delay para suavizar a transição
         setTimeout(() => {
           this.showSuccess = true;

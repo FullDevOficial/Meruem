@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../../shared/components/button/button';
-import { FooterComponent } from '../../shared/components/footer/footer';
+import { FooterComponent } from '../../shared/components/footer/footer-component';
 import { ModalVolunteerComponent } from '../../shared/components/modal-volunteer/modal-volunteer';
-import { NavMenuComponent } from '../../shared/components/nav-menu/nav-menu';
+import { NavMenuComponent } from '../../shared/components/nav-menu/nav-menu-component';
+import { CustomButtonComponent } from '../../shared/components/custom-button/custom-button';
 
 @Component({
   selector: 'app-voluntario',
-  imports: [NavMenuComponent, FooterComponent, ButtonComponent, ModalVolunteerComponent],
+  imports: [NavMenuComponent, FooterComponent, ModalVolunteerComponent, CustomButtonComponent],
   templateUrl: './voluntario.html',
-  styleUrl: './voluntario.scss',
+  styleUrl: './voluntario.component.scss',
 })
 export class VoluntarioComponent {
   showModal: boolean = false;
@@ -21,7 +21,7 @@ export class VoluntarioComponent {
     this.showModal = false;
   }
 
-  onFormSubmit(formData: {
+  onFormSubmit(_formData: {
     nome: string;
     email: string;
     linkedin: string;
@@ -29,7 +29,6 @@ export class VoluntarioComponent {
     pais: string;
     aceitartermos: boolean;
   }) {
-    console.log('Dados do voluntário:', formData);
     // Implementar a lógica de envio dos dados (API, etc)
   }
 }
