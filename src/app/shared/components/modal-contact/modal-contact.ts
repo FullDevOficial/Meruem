@@ -5,7 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ModalGenericComponent } from '../modal-generic/modal-generic';
+import { ModalComponent } from '../custom-modal/custom-modal';
 import { LoadingValidationComponent } from '../loading-validation/loading-validation';
 
 @Component({
@@ -18,11 +18,11 @@ import { LoadingValidationComponent } from '../loading-validation/loading-valida
     MatInputModule,
     MatCheckboxModule,
     MatIconModule,
-    ModalGenericComponent,
-    LoadingValidationComponent
+    ModalComponent,
+    LoadingValidationComponent,
   ],
   templateUrl: './modal-contact.html',
-  styleUrl: './modal-contact.scss'
+  styleUrl: './modal-contact.scss',
 })
 export class ModalContactComponent implements OnChanges {
   @Input() isOpen: boolean = false;
@@ -65,11 +65,13 @@ export class ModalContactComponent implements OnChanges {
   }
 
   isFormValid(): boolean {
-    return this.nomeControl.valid && 
-           this.emailControl.valid && 
-           this.assuntoControl.valid &&
-           this.mensagemControl.valid && 
-           this.termosControl.valid;
+    return (
+      this.nomeControl.valid &&
+      this.emailControl.valid &&
+      this.assuntoControl.valid &&
+      this.mensagemControl.valid &&
+      this.termosControl.valid
+    );
   }
 
   getFieldErrorMessage(fieldControl: FormControl, fieldName: string): string {
@@ -93,7 +95,7 @@ export class ModalContactComponent implements OnChanges {
   onSubmit() {
     if (this.isFormValid()) {
       this.isValidating = true;
-      
+
       // Simula validação (2 segundos)
       setTimeout(() => {
         this.isValidating = false;
@@ -102,11 +104,10 @@ export class ModalContactComponent implements OnChanges {
           email: this.emailControl.value ? this.emailControl.value.trim() : '',
           assunto: this.assuntoControl.value ? this.assuntoControl.value.trim() : '',
           mensagem: this.mensagemControl.value ? this.mensagemControl.value.trim() : '',
-          aceitartermos: this.termosControl.value === true
+          aceitartermos: this.termosControl.value === true,
         });
         this.resetForm();
       }, 2000);
     }
   }
 }
-

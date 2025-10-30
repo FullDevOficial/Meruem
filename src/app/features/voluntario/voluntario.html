@@ -1,5 +1,5 @@
 <section class="section section-voluntary">
-  <app-nav-menu></app-nav-menu>
+  <app-nav-menu-component></app-nav-menu-component>
   <div class="container">
     <h2 class="section__title">Seja voluntário</h2>
     <article class="section-voluntary__content">
@@ -52,29 +52,29 @@
         </p>
       </section>
 
-      <app-button [color]="'primary'" (click)="openModal()">Entrar em contato</app-button>
+      <app-custom-button-component [color]="'primary'" (click)="openModal()">Entrar em contato</app-custom-button-component>
     </article>
   </div>
 
   <div>
     <section class="section-social-media">
-      <app-button>
+      <app-custom-button-component>
         <img class="section-social-media__img" src="github.svg" alt="" />
-      </app-button>
-      <app-button>
+      </app-custom-button-component>
+      <app-custom-button-component>
         <img class="section-social-media__img" src="youtube.svg" alt="" />
-      </app-button>
-      <app-button>
+      </app-custom-button-component>
+      <app-custom-button-component>
         <img class="section-social-media__img" src="linkedin.svg" alt="" />
-      </app-button>
-      <app-button>
+      </app-custom-button-component>
+      <app-custom-button-component>
         <img class="section-social-media__img" src="instagram.svg" alt="" />
-      </app-button>
-      <app-button>
+      </app-custom-button-component>
+      <app-custom-button-component>
         <img class="section-social-media__img" src="discord.svg" alt="" />
-      </app-button>
+      </app-custom-button-component>
     </section>
-    <app-footer></app-footer>
+    <app-footer-component></app-footer-component>
   </div>
 
   <app-modal-volunteer 
