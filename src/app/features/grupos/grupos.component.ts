@@ -8,9 +8,11 @@ import { CustomButtonComponent } from '../../shared/components/custom-button/cus
   imports: [CommonModule, CustomButtonComponent],
   templateUrl: './grupos.component.html',
   styleUrl: './grupos.component.scss',
+  template: ``,
 })
 export class GruposComponent {
   @Input() text = 'Grupos';
+  @Input() memberCount: number = 0;
   @Input() src: 'fulldev.png' | 'codequeens.png' = 'fulldev.png';
   @Input() parentType: 'home' | 'modal' = 'home';
   @Input() showIcon = false;

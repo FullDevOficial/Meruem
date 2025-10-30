@@ -1,18 +1,24 @@
-<section class="group-section" [ngClass]="parentType">
-  <div class="group-section__content">
-    <img [src]="src" class="group-section__logo" alt="Logo FullDev" />
-    <div class="group-section__description">
-      <h2 class="group-section__description__title">{{ text }}</h2>
-      <p><img src="member.svg" alt="Icone membros" /> 1021</p>
+<section class="group-card" [ngClass]="parentType">
+
+    <div class="group-card__content">
+
+        <img [src]="src" class="group-card__logo" alt="'Logo do grupo' {{ text }}">
+       
+        <div class="group-section__info">
+            <h2 class="group-card__title" > {{ text }} </h2>
+            <p class="group-card__members"><img src="member.svg" alt="Icone membros" aria-hidden="true"> {{ memberCount }} </p>
+        </div>
+
+        @if (showIcon) {<img src="fix.svg" alt="Icone fix">}
+
     </div>
-    @if (showIcon) {
-      <img src="fix.svg" alt="Icone fix" />
-    }
-  </div>
-  <app-custom-button-component
-    sizes="large"
-    text="Entrar no grupo"
+
+    <app-custom-button-component 
+    sizes="large" 
+    text="Entrar no grupo" 
     color="link"
     [showIcon]="true"
-  ></app-custom-button-component>
+    >
+    </app-custom-button-component>
+    
 </section>
