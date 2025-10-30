@@ -36,15 +36,15 @@ body {
 
 :root {
   --font-base: 'Inter', sans-serif;
-  --light-gray: #bababa;
-  --medium-dark: #4c4c4c;
-  --dark-gray: #1c1c1c;
-  --black: #0d0d0d;
-  --red: #b22d00;
-  --orange: #d77e00;
-  --text-color-primary: #ffffff;
-  --text-color-secondary: #8b949e;
-  --text-color-third: #9198a1;
+  --light-gray: #BABABA;
+  --medium-dark: #4C4C4C;
+  --dark-gray: #1C1C1C;
+  --black: #0D0D0D;
+  --red: #B22D00;
+  --orange: #D77E00;
+  --text-color-primary: #FFFFFF;
+  --text-color-secondary: #8B949E;
+  --text-color-third: #9198A1;
 
   --font-size-capition: 12px;
   --font-size-small: 14px;
@@ -54,11 +54,12 @@ body {
 }
 
 body {
+  max-width: 1024px;
   font-family: var(--font-base);
   color: var(--text-color-secondary);
   background-color: var(--black);
   font-size: var(--font-size-medium);
-  margin: 0;
+  margin: auto;
   padding: 0;
   box-sizing: border-box;
   font-weight: 400;
@@ -67,6 +68,9 @@ body {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
 }
 
 a {
@@ -100,9 +104,9 @@ a {
   &__body {
     font-size: var(--font-size-capition);
     color: #989898;
-    padding: 1.34em;
+    padding: 1.334em;
     border: 1px solid var(--medium-dark);
-    border-radius: 0.5em;
+    border-radius: 0.667em;
     margin-bottom: 10.62em;
   }
 
@@ -201,4 +205,16 @@ div.mat-mdc-select-panel {
 
 .mdc-text-field--filled {
   height: 44px !important;
+}
+
+.mat-mdc-menu-panel.custom-menu-panel {
+  background-color: var(--black);
+}
+
+button.mat-mdc-menu-item.mat-mdc-menu-item{
+  color: var(--light-gray) ;
+}
+
+button.mat-mdc-menu-item.mat-mdc-menu-item:hover{
+  background-color: var(--medium-dark);
 }

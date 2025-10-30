@@ -1,0 +1,168 @@
+::ng-deep {
+  app-modal-contact {
+    .modal__body {
+      padding-top: 32px !important;
+    }
+
+    // Remove padding do body quando está carregando
+    .modal__body:has(app-loading-validation) {
+      padding: 0 !important;
+    }
+  }
+}
+
+.form-field {
+  margin-bottom: 12px;
+
+  .field-label {
+    display: block;
+    color: #EDEEEE;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  &:first-child {
+    margin-top: 8px;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.checkbox-container {
+  margin: 24px 0;
+
+  mat-checkbox {
+    color: #EDEEEE !important;
+  }
+
+  ::ng-deep mat-checkbox {
+    .mat-checkbox-label {
+      color: #EDEEEE !important;
+      font-size: 14px !important;
+    }
+
+    .mdc-label {
+      color: #EDEEEE !important;
+    }
+
+    .mdc-checkbox__label {
+      color: #EDEEEE !important;
+    }
+  }
+}
+
+.submit-button {
+  background-color: #B22D00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 24px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(178, 45, 0, 0.3);
+  }
+
+  &:disabled {
+    background-color: #404040;
+    color: #666666;
+    cursor: not-allowed;
+    transform: none;
+    
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+// Override dos estilos padrão do Angular Material
+::ng-deep {
+  app-modal-contact {
+    .mat-mdc-form-field {
+      display: block;
+      
+      .mat-mdc-text-field-wrapper {
+        background-color: #404040 !important;
+        border-radius: 4px !important;
+        padding: 0 16px;
+        border: 1px solid transparent !important;
+
+        input, textarea {
+          color: #EDEEEE !important;
+          font-size: 14px !important;
+          font-family: 'Inter', sans-serif !important;
+          
+          &::placeholder {
+            color: #888888 !important;
+          }
+        }
+
+        textarea {
+          resize: vertical;
+          min-height: 80px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+      }
+
+      .mat-mdc-form-field-infix {
+        border-top: none !important;
+      }
+
+      &.mat-form-field-invalid {
+        .mat-mdc-text-field-wrapper {
+          border: 1px solid #B22D00 !important;
+          box-shadow: 0 0 0 1px rgba(178, 45, 0, 0.3) !important;
+        }
+      }
+
+      &.mat-focused {
+        .mat-mdc-text-field-wrapper {
+          border: 1px solid #ff6b35 !important;
+          box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2) !important;
+        }
+      }
+    }
+
+    mat-checkbox {
+      .mat-checkbox-checkmark-path {
+        stroke: white !important;
+      }
+
+      &.mat-checkbox-checked .mat-checkbox-background {
+        background-color: #B22D00 !important;
+      }
+
+      .mat-checkbox-frame {
+        border-color: #EDEEEE !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .form-field {
+    margin-bottom: 16px;
+  }
+
+  .submit-button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+

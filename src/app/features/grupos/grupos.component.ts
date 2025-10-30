@@ -16,4 +16,24 @@ export class GruposComponent {
   @Input() src: 'fulldev.png' | 'codequeens.png' = 'fulldev.png';
   @Input() parentType: 'home' | 'modal' = 'home';
   @Input() showIcon = false;
+  @Input() groupName: string = '';
+
+  isMembershipModalOpen = false;
+
+  openMembershipModal() {
+    this.isMembershipModalOpen = true;
+  }
+
+  closeMembershipModal() {
+    this.isMembershipModalOpen = false;
+  }
+
+  onMembershipConfirmed(_data: { nome: string; telefone: string; pais: string; grupo: string }) {
+    // Implementar lógica para adicionar usuário ao grupo
+  }
+
+  onAccessGroup() {
+    // Implementar a lógica de acesso ao grupo (API, etc)
+    this.closeMembershipModal();
+  }
 }

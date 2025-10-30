@@ -1,41 +1,32 @@
 <nav class="nav-menu">
-  <a routerLink="#" class="nav-menu__back">
+  <a (click)="goBack()" class="nav-menu__back">
     <img src="back.png" alt="Seta voltar" />
-    Voltar</a
-  >
+    Voltar
+  </a>
 
-  <ul class="nav-menu__list">
+  <ul class="nav-menu__list desktop-menu">
     <li>
-      <a
-        routerLink="/home"
-        routerLinkActive="nav-menu__list__item--active"
-        class="nav-menu__list__item"
-        >Inicio</a
-      >
+      <a routerLink="/home" routerLinkActive="nav-menu__list__item--active" class="nav-menu__list__item">Inicio</a>
     </li>
     <li>
-      <a
-        routerLink="/sobre"
-        routerLinkActive="nav-menu__list__item--active"
-        class="nav-menu__list__item"
-        >Sobre nós</a
-      >
+      <a routerLink="/sobre" routerLinkActive="nav-menu__list__item--active" class="nav-menu__list__item">Sobre nós</a>
     </li>
     <li>
-      <a
-        routerLink="/voluntario"
-        routerLinkActive="nav-menu__list__item--active"
-        class="nav-menu__list__item"
-        >Seja voluntário</a
-      >
+      <a routerLink="/voluntario" routerLinkActive="nav-menu__list__item--active" class="nav-menu__list__item">Seja
+        voluntário</a>
     </li>
     <li>
-      <a
-        routerLink="/contato"
-        routerLinkActive="nav-menu__list__item--active"
-        class="nav-menu__list__item"
-        >Contato</a
-      >
+      <a routerLink="/contato" routerLinkActive="nav-menu__list__item--active" class="nav-menu__list__item">Contato</a>
     </li>
   </ul>
+
+  <button class="mobile-menu" matIconButton [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" class="custom-menu-panel">
+    <button mat-menu-item [routerLink]="'/home'">Inicio</button>
+    <button mat-menu-item [routerLink]="'/sobre'">Sobre nós</button>
+    <button mat-menu-item [routerLink]="'/voluntario'">Seja voluntário</button>
+    <button mat-menu-item [routerLink]="'/contato'">Contato</button>
+  </mat-menu>
 </nav>
