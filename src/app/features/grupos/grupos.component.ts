@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 import { CustomButtonComponent } from '../../shared/components/custom-button/custom-button';
+import { ModalMembershipComponent } from '../../shared/components/modal-membership/modal-membership';
 
 @Component({
   selector: 'app-grupos-component',
-  imports: [CommonModule, CustomButtonComponent],
+  imports: [CommonModule, CustomButtonComponent, ModalMembershipComponent],
   templateUrl: './grupos.component.html',
   styleUrl: './grupos.component.scss',
 })

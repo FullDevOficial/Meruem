@@ -17,7 +17,7 @@
   <!-- Campo Nome -->
   <div class="form-field">
     <label class="field-label">Nome:</label>
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="fill" class="full-width">
       <input matInput 
              placeholder="Seu nome" 
              [formControl]="nomeControl"
@@ -31,7 +31,7 @@
   <!-- Campo E-mail -->
   <div class="form-field">
     <label class="field-label">E-mail:</label>
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="fill" class="full-width">
       <input matInput 
              placeholder="Seu e-mail" 
              [formControl]="emailControl"
@@ -45,7 +45,7 @@
   <!-- Campo Assunto -->
   <div class="form-field">
     <label class="field-label">Assunto:</label>
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="fill" class="full-width">
       <input matInput 
              placeholder="Seu assunto" 
              [formControl]="assuntoControl"
@@ -59,16 +59,15 @@
   <!-- Campo Mensagem -->
   <div class="form-field">
     <label class="field-label">Mensagem:</label>
-    <mat-form-field appearance="outline" class="full-width">
-      <textarea matInput 
-                placeholder="Sua mensagem" 
+    <div class="mat-like-field full-width">
+      <textarea class="plain-textarea"
+                placeholder="Sua mensagem"
                 [formControl]="mensagemControl"
-                rows="4">
-      </textarea>
-      <mat-error *ngIf="isFieldInvalid(mensagemControl)">
-        {{ getFieldErrorMessage(mensagemControl, 'Mensagem') }}
-      </mat-error>
-    </mat-form-field>
+                rows="6"></textarea>
+    </div>
+    <div class="error-text" *ngIf="isFieldInvalid(mensagemControl)">
+      {{ getFieldErrorMessage(mensagemControl, 'Mensagem') }}
+    </div>
   </div>
 
   <!-- Checkbox de termos -->
@@ -77,7 +76,7 @@
       Concordo com os termos de usuário
     </mat-checkbox>
   </div>
-
+ 
   <!-- Botão de envio -->
   <button 
     class="submit-button" 

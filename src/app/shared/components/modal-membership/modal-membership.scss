@@ -156,6 +156,8 @@
   
   .mat-mdc-input-element {
     color: #EDEEEE !important;
+    font-size: 16px;
+    line-height: 24px;
   }
   
   .mat-mdc-form-field-label {
@@ -164,5 +166,67 @@
   
   .mat-mdc-form-field-input-control {
     color: #EDEEEE !important;
+  }
+
+  // Ajuste de altura dos inputs sem causar sobreposição
+  .mat-mdc-text-field-wrapper {
+    height: auto; 
+  }
+
+  .mat-mdc-form-field-flex {
+    align-items: center;
+  }
+
+  .mat-mdc-form-field-infix {
+    min-height: 48px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+// Garantir que o campo outlined respeite altura automática
+::ng-deep .mdc-text-field--outlined {
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .phone-input-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .phone-country {
+    width: 100%;
+  }
+
+  .phone-number {
+    width: 100%;
+  }
+
+  .confirm-button-modal {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    gap: 12px;
+  }
+
+  .input-group {
+    gap: 6px;
+  }
+
+  .input-label {
+    font-size: 13px;
+  }
+
+  .phone-input-container {
+    gap: 6px;
+  }
+
+  .checkbox-container {
+    margin-top: 12px;
+    margin-bottom: 6px;
   }
 }

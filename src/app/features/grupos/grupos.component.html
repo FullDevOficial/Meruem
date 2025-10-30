@@ -14,5 +14,14 @@
     text="Entrar no grupo"
     color="link"
     [showIcon]="true"
+    (buttonClick)="openMembershipModal()"
   ></app-custom-button-component>
+
+  <app-modal-membership
+    [isOpen]="isMembershipModalOpen"
+    [groupName]="groupName || text"
+    (close)="closeMembershipModal()"
+    (confirm)="onMembershipConfirmed($event)"
+    (accessGroup)="onAccessGroup()"
+  ></app-modal-membership>
 </section>
