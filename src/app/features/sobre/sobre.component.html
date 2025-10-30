@@ -43,5 +43,8 @@
         <app-footer-component></app-footer-component>
     </div>
 
-    <app-custom-modal [title]="'Contato'" [isOpen]="showModal" (closeModal)="toggleModal()"></app-custom-modal>
+    <app-modal-contact 
+        [isOpen]="showModal" 
+        (close)="toggleModal()"
+        (submit)="onContactSubmit($event)"></app-modal-contact>
 </section>

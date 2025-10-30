@@ -1,7 +1,9 @@
 .home {
   display: grid;
   place-items: center;
-  min-height: 100vh;
+  height: 100vh; 
+  box-sizing: border-box; 
+  overflow: hidden; 
   padding: 1rem;
 
   > div {
