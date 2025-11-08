@@ -9,12 +9,13 @@
   max-width: 90%;
   width: 450px;
   height: 416px;
-  color: white;
+  color: var(--text-color-primary);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
+  padding: 2.29em;
 
   // Tablet sizes
   &-sm {
@@ -23,15 +24,16 @@
   }
 
   &-md {
-    width: 540px;
+    width: 450px;
     height: auto;
     min-height: 324px;
   }
 
   &-lg {
-    width: 600px;
+    width: 540px;
     min-height: 500px;
     height: auto;
+    padding: 24px 32px 16px;
   }
 
   &-xl {
@@ -56,13 +58,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 32px 16px;
+    padding-bottom: 1em;
+    border-bottom: 1px solid;
 
     .modal__title {
       margin: 0;
       font-size: 24px;
       font-weight: 700;
-      color: white;
+      color: var(--text-color-primary);
       line-height: 1.2;
     }
   }
@@ -88,7 +91,7 @@
   }
 
   &__banner {
-    background-color: #D77E00;
+    background-color: var(--orange);
     color: #EDEEEE;
     padding: 8px;
     margin: 0 32px;
@@ -104,9 +107,9 @@
   }
 
   &__body {
-    padding: 24px 32px 40px 32px;
     font-size: 16px;
     line-height: 1.6;
+    padding-top: 0.88em;
 
     .form-field {
       margin-bottom: 20px;
@@ -116,107 +119,10 @@
       }
     }
 
-    ::ng-deep .mat-mdc-form-field-input-control {
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      color: #EDEEEE !important;
-      background-color: #BABABA !important;
-      border-radius: 4px;
-
-      .mat-mdc-input-element {
-        font-family: 'Inter', sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        color: #212529 !important;
-        background-color: #BABABA !important;
-
-        &::placeholder {
-          color: rgba(33, 37, 41, 0.7) !important;
-        }
-      }
-    }
-
-    ::ng-deep .mat-mdc-form-field {
-      .mat-mdc-text-field-wrapper {
-        background-color: #BABABA !important;
-        border-radius: 4px;
-
-        .mat-mdc-form-field-flex {
-          background-color: #BABABA !important;
-
-          .mat-mdc-form-field-infix {
-            background-color: #BABABA !important;
-
-            input {
-              font-family: 'Inter', sans-serif !important;
-              font-size: 14px !important;
-              font-weight: 400 !important;
-              color: #212529 !important;
-              background-color: transparent !important;
-
-              &::placeholder {
-                color: rgba(33, 37, 41, 0.7) !important;
-              }
-            }
-          }
-        }
-      }
-
-      .mat-mdc-form-field-label {
-        color: #EDEEEE !important;
-        font-family: 'Inter', sans-serif !important;
-        font-size: 14px !important;
-        font-weight: 400 !important;
-      }
-
-      .mat-mdc-form-field-outline {
-        color: rgba(255, 255, 255, 0.3) !important;
-      }
-
-      .mat-mdc-form-field-outline-thick {
-        color: #EDEEEE !important;
-        stroke-width: 2px !important;
-      }
-
-      &.mat-focused,
-      &.mat-mdc-form-field-should-float {
-        .mat-mdc-form-field-outline-thick {
-          color: #EDEEEE !important;
-          stroke-width: 2px !important;
-        }
-
-        .mat-mdc-form-field-infix input {
-          color: #212529 !important;
-        }
-
-        .mat-mdc-form-field-input-element {
-          color: #212529 !important;
-        }
-      }
-    }
-
     .checkbox-container {
       display: flex;
       align-items: center;
       margin-top: 24px;
-
-      mat-checkbox {
-        .mat-checkbox-frame {
-          border-color: #EDEEEE !important;
-        }
-
-        &.mat-checked .mat-checkbox-background {
-          background-color: #ff6b35;
-        }
-
-        ::ng-deep .mat-checkbox-label {
-          color: white !important;
-          font-family: 'Inter', sans-serif !important;
-          font-size: 14px !important;
-          font-weight: 400 !important;
-        }
-      }
     }
   }
 
@@ -229,8 +135,8 @@
     background-color: transparent;
 
     .confirm-button {
-      background-color: #B22D00;
-      color: white;
+      background-color: var(--red);
+      color: var(--text-color-primary);
       border: none;
       width: 350px;
       height: 40px;

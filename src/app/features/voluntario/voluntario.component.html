@@ -66,9 +66,7 @@
   <app-custom-modal [title]="'Seja voluntário'" [isOpen]="showModal" (close)="closeModal()">
 
     <form class="formulario">
-      <label for="name">Nome:
-        <input type="text" placeholder="Insira seu nome">
-      </label>
+      <app-custom-input placeholder="Nome"></app-custom-input>
       <label for="email">E-mail:
         <input type="email" placeholder="Insira seu E-mail">
       </label>
