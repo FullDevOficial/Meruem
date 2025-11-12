@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { NavMenuComponent } from '../../shared/components/nav-menu/nav-menu-component';
 import { FooterComponent } from '../../shared/components/footer/footer-component';
 import { CustomButtonComponent } from '../../shared/components/custom-button/custom-button';
-import { ModalComponent } from '../../shared/components/custom-modal/custom-modal';
 import { SocialComponent } from '../../shared/components/social-component/social-component';
+import { InputComponent } from "../../shared/components/custom-input/custom-input";
+import { ModalMembershipComponent } from "../../shared";
 
 @Component({
   selector: 'app-voluntario-component',
@@ -11,14 +12,15 @@ import { SocialComponent } from '../../shared/components/social-component/social
     CustomButtonComponent,
     SocialComponent,
     FooterComponent,
-    ModalComponent,
     NavMenuComponent,
-  ],
+    InputComponent,
+    ModalMembershipComponent
+],
   templateUrl: './voluntario.component.html',
   styleUrl: './voluntario.component.scss',
 })
 export class VoluntarioComponent {
-  showModal: boolean = false;
+  showModal: boolean = true;
 
   openModal() {
     this.showModal = true;

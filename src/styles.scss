@@ -6,12 +6,10 @@
 @use '@angular/material' as mat;
 
 html {
-  @include mat.theme((color: (primary: mat.$azure-palette,
+  @include mat.theme((color:(primary: mat.$azure-palette,
         tertiary: mat.$blue-palette,
-      ),
-      typography: Roboto,
-      density: 0,
-    ));
+        typography: Roboto,
+        density: 0, )));
 }
 
 body {
@@ -68,7 +66,6 @@ body {
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 
 }
@@ -131,96 +128,144 @@ a {
     line-height: 100%;
 
   }
+}
+
+// Override dos estilos padrão do Angular Material
+
+app-custom-modal {
+
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+
+    &::placeholder,
+    .mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input {
+      color: #888888;
+    }
+  }
+
+  .mat-mdc-form-field {
+    display: block;
+
+    .mat-mdc-text-field-wrapper {
+      background-color: var(--light-gray);
+      padding: 0 16px;
+      border-radius: 0;
+
+
+      textarea {
+        resize: vertical;
+        min-height: 80px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+      }
+    }
+
+    .mat-mdc-form-field-infix {
+      border-top: none;
+      padding: 0.5em 0;
+    }
+
+    &.mat-form-field-invalid {
+      .mat-mdc-text-field-wrapper {
+        border: 1px solid #B22D00;
+        box-shadow: 0 0 0 1px rgba(178, 45, 0, 0.3);
+      }
+    }
+
+    &.mat-focused {
+      .mat-mdc-text-field-wrapper {
+        border: 1px solid #ff6b35;
+        box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+      }
+    }
+  }
+
+  & .mat-mdc-form-field-error {
+    font-size: var(--font-size-small);
+  }
+
+  mat-checkbox {
+    padding-bottom: 0.19em;
+
+    .mat-checkbox-checkmark-path {
+      stroke: white;
+    }
+
+    &.mat-checkbox-checked .mat-checkbox-background {
+      background-color: #B22D00;
+    }
+
+    .mat-checkbox-frame {
+      border-color: #EDEEEE;
+    }
+  }
+
+  .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
+
+  .mat-mdc-form-field-subscript-wrapper:has(.mat-mdc-form-field-error) {
+    display: block;
+  }
+
+  .mdc-checkbox {
+    padding-right: 0.5em;
+    padding-left: 0;
+
+    &__background {
+      top: 25%;
+      left: 0;
+      background-color: #C8C9CB;
+      border-radius: 4px;
+    }
+  }
 
 }
 
-.section-social-media {
-  display: flex;
-  gap: 0.5em;
+app-modal-membership app-custom-modal {
+
+  .checkbox-container {
+    margin-bottom: 6px;
+    border-bottom: 1px solid #5A5A5A;
+
+    mat-checkbox {
+      color: #EDEEEE;
+
+      .mat-checkbox-frame {
+        border-color: white;
+      }
+
+      .mat-checkbox-checked .mat-checkbox-background {
+        background-color: #ff6b35;
+      }
+
+      .mat-checkbox-label,
+      .mdc-checkbox__label {
+        color: #EDEEEE;
+      }
+
+      .mdc-label {
+        color: #EDEEEE;
+        font-size: var(--font-size-small);
+      }
+    }
+  }
 }
 
-.mat-mdc-form-field-subscript-wrapper {
-  display: none !important;
-}
+.mat-mdc-form-field {
+  .mat-mdc-form-field-subline {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
-.mat-mdc-form-field-infix {
-  padding: 0.63em 0 !important;
+  .mat-mdc-form-field-outline-thick {
+    color: #ff6b35;
+  }
 
-}
+  .mdc-text-field--no-label:not(.mdc-text-field--textarea) .mat-mdc-form-field-input-control.mdc-text-field__input,
+  .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
+    color: #696969;
+  }
 
-.mat-mdc-select-min-line,
-.mat-mdc-option.mdc-list-item {
-  font-size: var(--font-size-small);
-  color: #696969;
-  font-family: var(--font-base);
-}
-
-.custom-select .mdc-text-field--filled:not(.mdc-text-field--disabled),
-div.mat-mdc-select-panel {
-  background-color: var(--light-gray) !important;
-}
-
-.mat-mdc-select-arrow {
-  display: none;
-  /* esconde a seta */
-}
-
-.mat-mdc-option:focus.mdc-list-item,
-.mat-mdc-option.mat-mdc-option-active.mdc-list-item {
-  background-color: var(--text-color-third) !important;
-}
-
-.mdc-text-field--filled:not(.mdc-text-field--disabled) {
-  border-radius: 0;
-}
-
-.mdc-checkbox__background {
-  width: 16px !important;
-  height: 16px !important;
-  background-color: #C8C9CB !important;
-  border-radius: 0.29em !important;
-  border: 1px solid #717478 !important;
-  padding: 0 !important;
-}
-
-.mdc-label {
-  color: #EDEEEE !important;
-  font-family: var(--font-base) !important;
-  font-weight: 400 !important;
-  line-height: 24px !important;
-}
-
-.mat-mdc-input-element input .mat-mdc-form-field-input-control .mdc-text-field__input .cdk-text-field-autofill-monitored {
-  margin: 0 !important;
-}
-
-.mat-mdc-form-field-infix {
-  padding: 0.5rem 0 !important;
-  height: 44px !important;
-  box-sizing: border-box;
-  color: #696969 !important;
-}
-
-.mat-mdc-text-field-wrapper .mdc-text-field .mdc-text-field--filled .mdc-text-field--no-label {
-  height: 44px !important;
-}
-
-.mdc-text-field--filled:not(.mdc-text-field--disabled) {
-  background-color: var(--light-gray);
-}
-
-.mdc-text-field--filled {
-  height: 44px !important;
-}
-
-.mat-mdc-menu-panel.custom-menu-panel {
-  background-color: var(--black);
-}
-
-button.mat-mdc-menu-item.mat-mdc-menu-item{
-  color: var(--light-gray) ;
-}
-
-button.mat-mdc-menu-item.mat-mdc-menu-item:hover{
-  background-color: var(--medium-dark);
 }
