@@ -4,7 +4,7 @@ import { FooterComponent } from '../../shared/components/footer/footer-component
 import { CustomButtonComponent } from '../../shared/components/custom-button/custom-button';
 import { SocialComponent } from '../../shared/components/social-component/social-component';
 import { InputComponent } from "../../shared/components/custom-input/custom-input";
-import { ModalComponent } from "../../shared/components/custom-modal/custom-modal";
+import { ModalMembershipComponent } from "../../shared";
 
 @Component({
   selector: 'app-voluntario-component',
@@ -14,13 +14,13 @@ import { ModalComponent } from "../../shared/components/custom-modal/custom-moda
     FooterComponent,
     NavMenuComponent,
     InputComponent,
-    ModalComponent
+    ModalMembershipComponent
 ],
   templateUrl: './voluntario.component.html',
   styleUrl: './voluntario.component.scss',
 })
 export class VoluntarioComponent {
-  showModal: boolean = false;
+  showModal: boolean = true;
 
   openModal() {
     this.showModal = true;
