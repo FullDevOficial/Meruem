@@ -59,4 +59,9 @@
         <app-social-component></app-social-component>
         <app-footer-component></app-footer-component>
     </div>
+
+    <app-modal-contact 
+        [isOpen]="showModal" 
+        (close)="closeModal()"
+        (submit)="onContactSubmit($event)"></app-modal-contact>
 </section>
