@@ -31,7 +31,6 @@
 
   &-lg {
     width: 540px;
-    min-height: 500px;
     height: auto;
     padding: 24px 32px 16px;
   }
@@ -59,7 +58,8 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1em;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #5A5A5A;
+    margin-bottom: 6px;
 
     .modal__title {
       margin: 0;
@@ -109,7 +109,6 @@
   &__body {
     font-size: 16px;
     line-height: 1.6;
-    padding-top: 0.88em;
 
     .form-field {
       margin-bottom: 20px;

@@ -1,25 +1,12 @@
-::ng-deep {
-  app-modal-volunteer {
-    .modal__body {
-      padding-top: 32px !important;
-    }
-
-    // Remove padding do body quando está carregando
-    .modal__body:has(app-loading-validation) {
-      padding: 0 !important;
-    }
-  }
-}
-
 .form-field {
-  margin-bottom: 20px;
 
   .field-label {
     display: block;
     color: #EDEEEE;
     font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 8px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    margin-top: 8px;
     font-family: 'Inter', sans-serif;
   }
 
@@ -43,28 +30,7 @@
   }
 }
 
-.checkbox-container {
-  margin: 24px 0;
 
-  mat-checkbox {
-    color: #EDEEEE !important;
-  }
-
-  ::ng-deep mat-checkbox {
-    .mat-checkbox-label {
-      color: #EDEEEE !important;
-      font-size: 14px !important;
-    }
-
-    .mdc-label {
-      color: #EDEEEE !important;
-    }
-
-    .mdc-checkbox__label {
-      color: #EDEEEE !important;
-    }
-  }
-}
 
 .submit-button {
   background-color: #ff6b35;
@@ -89,67 +55,8 @@
   }
 }
 
-// Override dos estilos padrão do Angular Material
-::ng-deep {
-  app-modal-volunteer {
-    .mat-mdc-form-field {
-      display: block;
-      
-      .mat-mdc-text-field-wrapper {
-        background-color: #404040 !important;
-        border-radius: 4px !important;
-        padding: 0 16px;
-        border: 1px solid transparent !important;
-
-        input {
-          color: #EDEEEE !important;
-          font-size: 14px !important;
-          
-          &::placeholder {
-            color: #888888 !important;
-          }
-        }
-      }
-
-      .mat-mdc-form-field-infix {
-        border-top: none !important;
-      }
-
-      &.mat-form-field-invalid {
-        .mat-mdc-text-field-wrapper {
-          border: 1px solid #ff6b35 !important;
-          box-shadow: 0 0 0 1px rgba(255, 107, 53, 0.3) !important;
-        }
-      }
-
-      &.mat-focused {
-        .mat-mdc-text-field-wrapper {
-          border: 1px solid #ff6b35 !important;
-          box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2) !important;
-        }
-      }
-    }
-
-    mat-checkbox {
-      .mat-checkbox-checkmark-path {
-        stroke: white !important;
-      }
-
-      &.mat-checkbox-checked .mat-checkbox-background {
-        background-color: #ff6b35 !important;
-      }
-    }
-  }
-}
-
 @media (max-width: 600px) {
   .phone-field .phone-inputs {
     flex-direction: column;
-  }
-
-  .country-code,
-  .phone-number {
-    flex: none !important;
-    width: 100%;
   }
 }

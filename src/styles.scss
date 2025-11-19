@@ -137,10 +137,18 @@ app-custom-modal {
   .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
     font-size: 14px;
     font-family: 'Inter', sans-serif;
+    color: #696969;
+    line-height: 24px;
 
     &::placeholder {
       color: #888888;
     }
+  }
+
+  .mdc-text-field {
+    border-radius: 0;
+    border: 1px solid #CED4DA;
+    background-color: #BABABA;
   }
 
   .mat-mdc-form-field {
@@ -158,7 +166,6 @@ app-custom-modal {
 
       }
     }
-
 
     .mat-mdc-form-field-infix {
       border-top: none;
@@ -184,7 +191,15 @@ app-custom-modal {
     font-size: var(--font-size-small);
   }
 
+  .mdc-label,
+  .mdc-checkbox__label,
+  .mat-checkbox-label,
   mat-checkbox {
+    color: #EDEEEE;
+  }
+
+  mat-checkbox {
+
     .mat-checkbox-checkmark-path {
       stroke: white;
     }
@@ -197,11 +212,11 @@ app-custom-modal {
       border-color: #EDEEEE;
     }
   }
-  
+
   .mat-mdc-form-field-subscript-wrapper {
     display: none;
   }
-  
+
   .mat-mdc-form-field-subscript-wrapper:has(.mat-mdc-form-field-error) {
     display: block;
   }
@@ -209,12 +224,46 @@ app-custom-modal {
   .mdc-checkbox {
     padding-right: 0.5em;
     padding-left: 0;
+    padding-bottom: 0.5em;
 
     &__background {
-      top:25%;
+      top: 25%;
       left: 0;
       background-color: #C8C9CB;
-      border-radius: 4px;
+    }
+  }
+}
+
+app-modal-volunteer {
+  .checkbox-container {
+    margin: 8px 0 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #5A5A5A;
+
+    mat-checkbox {
+
+      .mat-checkbox-label {
+        font-size: var(--font-size-small);
+      }
+
+    }
+
+    .mat-mdc-checkbox .mat-internal-form-field {
+      height: auto;
+    }
+  }
+
+  .mdc-text-field,
+  .mat-mdc-form-field-flex {
+    height: 44px;
+  }
+
+  @media (max-width: 600px) {
+
+    .country-code,
+    .phone-number {
+      flex: none;
+      width: 100%;
     }
   }
 }

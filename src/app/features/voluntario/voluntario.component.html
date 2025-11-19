@@ -63,7 +63,7 @@
     <app-footer-component></app-footer-component>
   </div>
 
-  <app-custom-modal [title]="'Seja voluntário'" [isOpen]="showModal" (close)="closeModal()">
+  <app-modal-volunteer [title]="'Seja voluntário'" [isOpen]="showModal" (close)="closeModal()">
 
     <form class="formulario">
       <app-custom-input placeholder="Nome"></app-custom-input>
@@ -90,5 +90,5 @@
       <hr />
       <app-custom-button-component sizes="large" text="Enviar" [color]="'primary'"></app-custom-button-component>
     </form>
-  </app-custom-modal>
+  </app-modal-volunteer>
 </section>
