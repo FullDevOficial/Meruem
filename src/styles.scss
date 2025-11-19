@@ -254,6 +254,11 @@ app-modal-membership app-custom-modal {
   }
 }
 
+.mat-mdc-form-field-flex,
+.mat-mdc-form-field-flex{
+  height: 44px;
+}
+
 .mat-mdc-form-field {
   .mat-mdc-form-field-subline {
     color: rgba(255, 255, 255, 0.3);
