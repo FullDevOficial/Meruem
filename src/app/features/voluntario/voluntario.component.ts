@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { NavMenuComponent } from '../../shared/components/nav-menu/nav-menu-component';
-import { FooterComponent } from '../../shared/components/footer/footer-component';
 import { CustomButtonComponent } from '../../shared/components/custom-button/custom-button';
-import { ModalComponent } from '../../shared/components/custom-modal/custom-modal';
+import { FooterComponent } from '../../shared/components/footer/footer-component';
 import { ModalVolunteerComponent } from '../../shared/components/modal-volunteer/modal-volunteer';
+import { NavMenuComponent } from '../../shared/components/nav-menu/nav-menu-component';
 import { SocialComponent } from '../../shared/components/social-component/social-component';
 
 @Component({
@@ -12,7 +11,6 @@ import { SocialComponent } from '../../shared/components/social-component/social
     CustomButtonComponent,
     SocialComponent,
     FooterComponent,
-    ModalComponent,
     ModalVolunteerComponent,
     NavMenuComponent,
   ],
