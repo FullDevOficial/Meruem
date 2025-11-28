@@ -4,6 +4,7 @@
 // Learn more about theming and how to use it for your application's
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
+@import 'animation.scss';
 
 html {
   @include mat.theme((color: (primary: mat.$azure-palette,
@@ -63,6 +64,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 html,
