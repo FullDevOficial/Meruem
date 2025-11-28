@@ -12,6 +12,7 @@
   text-decoration: none;
   font-weight: 400;
   border: none;
+  animation: subirFade .8s ease-out forwards;
 
   &.link {
     background-color: var(--dark-gray);
