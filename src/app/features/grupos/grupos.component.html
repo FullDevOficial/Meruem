@@ -3,7 +3,7 @@
     <img [src]="src" class="group-section__logo" alt="Logo FullDev" />
     <div class="group-section__description">
       <h2 class="group-section__description__title">{{ text }}</h2>
-      <p><img src="member.svg" alt="Icone membros" /> 1021</p>
+      <!-- <p><img src="member.svg" alt="Icone membros" /> 1021</p> -->
     </div>
     @if (showIcon) {
       <img src="fix.svg" alt="Icone fix" />
@@ -14,8 +14,9 @@
     text="Entrar no grupo"
     color="link"
     [showIcon]="true"
-    (buttonClick)="openMembershipModal()"
-  ></app-custom-button-component>
+    (buttonClick)="goToGroupLink()"
+    ></app-custom-button-component>
+    <!-- (buttonClick)="openMembershipModal()" -->
 
   <app-modal-membership
     [isOpen]="isMembershipModalOpen"

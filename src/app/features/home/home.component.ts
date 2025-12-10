@@ -7,6 +7,7 @@ import { ModalComponent } from '../../shared/components/custom-modal/custom-moda
 import { FooterComponent } from '../../shared/components/footer/footer-component';
 import { SocialComponent } from '../../shared/components/social-component/social-component';
 import { GruposComponent } from '../grupos/grupos.component';
+import { _fixeGroups } from '../grupos/group.model';
 
 @Component({
   selector: 'app-home-component',
@@ -41,4 +42,6 @@ export class HomeComponent {
   closeModal() {
     this.showModal = false;
   }
+
+  groups = _fixeGroups
 }

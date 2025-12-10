@@ -44,6 +44,7 @@
     "@angular/router": "^20.3.0",
     "@angular/ssr": "^20.3.2",
     "express": "^5.1.0",
+    "magic-snowflakes": "^7.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
