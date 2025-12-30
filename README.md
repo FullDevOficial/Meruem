@@ -1,6 +1,6 @@
 # Meruem - Plataforma Colaborativa FullDev
 
-Bem-vindo ao projeto colaborativo **Meruem**! Este repositório é mantido por voluntários da comunidade FullDev e tem como objetivo criar uma plataforma moderna para conectar membros, divulgar avisos, eventos e facilitar o acesso aos grupos de ajuda da comunidade.
+Bem-vindo ao projeto colaborativo **Meruem**! Este repositório é mantido por voluntários da comunidade FullDev e tem como objetivo criar uma plataforma moderna para conectar membros, divulgar avisos, eventos e facilitar o acesso aos grupos de ajuda da comunidade. 
 
 ---
 
